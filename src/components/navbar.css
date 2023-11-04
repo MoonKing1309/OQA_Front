@@ -136,3 +136,45 @@ nav
     background: #fff;
   }
   
+
+@media only screen and (max-width:600px)
+{
+    body
+    {
+        font-size:small;
+    }
+
+    .nav-link-1 > a ,.nav-link-0 > a
+    {
+        margin: 3px;
+        padding: 5px;
+    }
+
+    .nav-buttons-0 > a , .nav-buttons-1
+    {
+        margin-right: 5px;
+        padding:5px;
+    }
+
+}
+
+@media only screen and (max-width:400px)
+{
+    body
+    {
+        font-size:x-small;
+    }
+
+    .nav-link-1 > a ,.nav-link-0 > a
+    {
+        margin: 3px;
+        padding: 3px;
+    }
+
+    .nav-buttons-0 > a , .nav-buttons-1
+    {
+        margin-right: 5px;
+        padding:3px;
+    }
+
+}

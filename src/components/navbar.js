@@ -5,7 +5,10 @@ function Navbar(props)
 
     const [loginState,setLoginState] = useState(props.loginState)
 
-    if(loginState==0)
+    function handleLogOut(){
+        setLoginState(0)
+    }
+    if(loginState===0)
     return(
         <nav>
             <div className='nav-title-0'>
@@ -37,10 +40,9 @@ function Navbar(props)
                     <a href='#' className='link'>Contact</a>
                 </div>
                 <div className='nav-buttons-1'>
-                    <a href='#'>Log-Out</a>
+                    <a href='#' onClick={handleLogOut}>Log-Out</a>
                 </div>
             </div>
-            
         </nav>
     )
 }
