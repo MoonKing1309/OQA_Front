@@ -10,27 +10,28 @@ nav
 }
 
 
-.nav-title > h1
+.nav-title-0 > h1
 {
     margin: 0px;
 }
 
-.nav-title > a
+.nav-title-0 > a
 {
     text-decoration: none;
     color: black;
 }
 
-.nav-body{
+.nav-body-0
+{
     display: flex;
     flex-grow: 1;
 }
 
-.nav-link
+.nav-link-0
 {
     margin-left: auto;
 }
-.nav-link > a
+.nav-link-0 > a
 {
     padding: 10px;
     margin: 10px;
@@ -38,13 +39,13 @@ nav
     color: black;
     font-weight: 800;
 }
-.nav-buttons
+.nav-buttons-0
 {
     margin-left: auto;
     width: max-content;
 }
 
-.nav-buttons > a
+.nav-buttons-0 > a
 {
     padding: 10px;
     margin-right: 10px;
@@ -54,11 +55,65 @@ nav
     box-shadow: 0px 1px 5px white;
 }
 
-.nav-buttons > a:hover
+.nav-buttons-0 > a:hover
 {
     box-shadow: 0px 0px 1px white;
     transform: translateY(4px);
 }
+
+.nav-title-1 > h1
+{
+    margin: 0px;
+}
+
+.nav-title-1 > a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-body-1
+{
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav-link-1
+{
+    margin-left: auto;
+}
+.nav-link-1 > a
+{
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+.nav-buttons-1
+{
+    margin-left: auto;
+    width: max-content;
+}
+
+.nav-buttons-1 > a
+{
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0px 1px 5px white;
+}
+
+.nav-buttons-1 > a:hover
+{
+    box-shadow: 0px 0px 1px white;
+    transform: translateY(4px);
+}
+
+
+
 
 .link{
     position: relative;
