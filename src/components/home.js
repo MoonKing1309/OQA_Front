@@ -1,22 +1,22 @@
-import './home.css'
+import style from './home.module.css'
 import clockimg from '../img/clockimg.avif'
 import newimg from '../img/newimg.avif'
 import cupimg from '../img/cupimg.jpg'
 function Home() {
     return (  
-        <div className='homebg'>
-            <div className='card1'>
+        <div className={style.homebg}>
+            <div className={style.card1}>
                 <div>
-                    <div className="card" id="card">
-                    <div className="card-img-field" >
-                        <img className="card-img" src={cupimg} alt="elephant"/>
+                    <div className={style.card}>
+                    <div className={style.cardImgField} >
+                        <img className={style.cardImg} src={cupimg} alt="elephant"/>
                     </div>
-                    <div className="card-text-field">
-                        <div className="card-text">
-                            <h2 className="card-text-title">
+                    <div className={style.cardTextField}>
+                        <div className={style.cardText}>
+                            <h2 className={style.cardTextTitle}>
                                 Competitive Edge
                             </h2>
-                            <p className="card-text-content">
+                            <p className={style.cardTextContent}>
                             Compete with friends, family, or the global community to see who reigns supreme in the world of quizzing.
                             </p>
                         </div>
@@ -24,18 +24,18 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className='card2'>
+            <div className={style.card2}>
                 <div>
-                        <div className="card" id="card">
-                        <div className="card-img-field" >
-                            <img className="card-img" src={clockimg} alt="elephant"/>
+                        <div className={style.card}>
+                        <div className={style.cardImgField} >
+                            <img className={style.cardImg} src={clockimg} alt="elephant"/>
                         </div>
-                        <div className="card-text-field">
-                            <div className="card-text">
-                                <h2 className="card-text-title">
+                        <div className={style.cardTextField}>
+                            <div className={style.cardText}>
+                                <h2 className={style.cardTextTitle}>
                                     Time Pressure
                                 </h2>
-                                <p className="card-text-content">
+                                <p className={style.cardTextContent}>
                                     Put your knowledge to the test under the ticking clock. Many of our quizzes come with time limits.Enriching your quizzing experince.
                                 </p>
                             </div>
@@ -43,18 +43,18 @@ function Home() {
                         </div>
                     </div>
             </div>
-            <div className='card3'>
+            <div className={style.card3}>
             <div>
-                        <div className="card" id="card">
-                        <div className="card-img-field" >
-                            <img className="card-img" src={newimg} alt="elephant"/>
+                        <div className={style.card}>
+                        <div className={style.cardImgField} >
+                            <img className={style.cardImg} src={newimg} alt="elephant"/>
                         </div>
-                        <div className="card-text-field">
-                            <div className="card-text">
-                                <h2 className="card-text-title">
+                        <div className={style.cardTextField}>
+                            <div className={style.cardText}>
+                                <h2 className={style.cardTextTitle}>
                                     Learning Reinvented
                                 </h2>
-                                <p className="card-text-content">
+                                <p className={style.cardTextContent}>
                                 Our quizzes aren't just about entertainment – they're a fun way to learn and expand your knowledge.
                                 </p>
                             </div>
@@ -62,7 +62,7 @@ function Home() {
                         </div>
                     </div>
             </div>
-            <div className='textarea'>
+            <div className={style.textarea}>
                 <h1>
                     Welcome to Project Name!
                 </h1>

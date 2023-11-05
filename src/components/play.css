@@ -11,6 +11,9 @@ body
     align-items: center;
     justify-content: center;
     overflow-y: scroll;
+    height: 100vh -60px;
+
+
 }
 
 .card
@@ -26,6 +29,25 @@ body
     transition-timing-function: ease-in-out;
     display: block;
 }
+
+@media only screen and (max-width:500px)
+{
+    .card
+    {
+        width: 300px;
+    }
+
+    .card-text-field
+    {
+        
+        z-index: 3;
+        position: relative;
+        height: 70% !important;
+        margin-top:-50% !important;
+        margin-right:-20% !important;
+    }
+
+} 
 
 .card-img-field
 {
