@@ -1,0 +1,199 @@
+
+.homebg
+{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?auto=format&fit=crop&q=80&w=2800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    overflow-y: scroll;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr);
+    grid-template-areas:
+    "card1 txtarea"
+    "card2 card3"
+}
+
+
+@media only screen and (max-width:1250px)
+{
+    .homebg
+    {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        background-repeat: repeat-y;
+        background-size: cover;
+        background-image: url('https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?auto=format&fit=crop&q=80&w=2800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:repeat(4,1fr);
+        grid-template-areas:
+            "txtarea"
+            "card1"
+            "card2"
+            "card3"
+    }
+
+    .textarea
+    {
+        margin-left:20px;
+        margin-right: 20px;
+    }
+
+    .card-text-field
+    {
+    
+    z-index: 3;
+    position: relative;
+    margin: -90% auto;
+    background-color: white;
+    color:black;
+    border-width: 0px;
+    border-style: outset;
+    max-width: 70%;
+    height: 0%;
+    box-shadow: 0 30px 200px;
+    overflow: hidden;
+    transform: translateZ(50px);
+    }
+
+    .card
+    {
+        width: 600px !important;
+        height: 200px;
+        z-index: 0;
+        margin:50px auto;
+        box-shadow: 0px 20px 1000px;
+        transition-property: transform;
+        transform-style: preserve-3d;
+        transition-timing-function: ease-in-out;
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width:750px)
+{
+    .card
+    {
+        width:250px !important;
+        height: 200px;
+        z-index: 0;
+        margin:50px auto;
+        box-shadow: 0px 20px 100px;
+        transition-property: transform;
+        transform-style: preserve-3d;
+        transition-timing-function: ease-in-out;
+        display: block;
+    }
+
+    .card-text-field
+    {
+        
+        z-index: 3;
+        position: relative;
+        height: 100% !important;
+        margin-top:-50% !important;
+        margin-right:-20% !important;
+    }
+} 
+
+.card1
+{
+    grid-area: card1;
+}
+.card2
+{
+    grid-area: card2;
+}
+.card3
+{
+    grid-area: card3;
+
+}
+.card4
+{
+    grid-area: card4;
+
+}
+
+.textarea
+{
+    grid-area: txtarea;
+    color:black;
+
+
+}
+
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.card
+{
+    width:600px;
+    height: 200px;
+    z-index: 0;
+    margin:50px auto;
+    box-shadow: 0px 20px 1000px;
+    transition-property: transform;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+    display: block;
+}
+
+.card-img-field
+{
+    position: relative;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+}
+.card-img
+{
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    
+    margin: 0px auto;
+}
+.card-text-field
+{
+    
+    z-index: 3;
+    position: relative;
+    margin: -20% auto;
+    background-color: white;
+    color:black;
+    border-width: 0px;
+    border-style: outset;
+    max-width: 70%;
+    height: 0%;
+    box-shadow: 0 30px 200px;
+    overflow: hidden;
+    transform: translateZ(50px);
+}
+
+
+.card:hover .card-text-field 
+{
+    height: 70%;
+    border-width: 1px;
+    transition-duration: 0.3s;
+
+}
+
+.card-text-title
+{
+    font-weight: 700;
+}
+

@@ -1,0 +1,67 @@
+.formbox
+{
+    box-shadow: 1px 5px 10px black;
+    width: 500px;
+    margin: auto auto;
+    height: 600px;
+    margin-top: 50px;
+    
+}
+
+@media only screen and (max-width:550px)  {
+    .formbox
+    {
+        width:90%;
+    }
+
+    .formbox input
+    {
+        width: 90%;
+    }
+}
+.formbox>h1
+{
+    padding-top: 50px;
+}
+.formbox > form
+{
+    margin-top: 50px;
+}
+
+.formbox  input
+{
+    outline: none;
+    border: 2px solid blueviolet;
+    height: 20px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+td,tr
+{
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+}
+
+table
+{
+    outline: 2px;
+}
+
+#btn
+{
+    padding: 10px 20px 10px 20px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 50px;
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px black;
+}
+
+#btn:active
+{
+    box-shadow: 0px 0px 3px black;
+    transform: scaleY(7px);
+}
