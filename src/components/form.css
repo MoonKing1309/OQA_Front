@@ -1,3 +1,5 @@
+
+
 .formbox
 {
     box-shadow: 1px 5px 10px black;
@@ -5,6 +7,7 @@
     margin: auto auto;
     height: 600px;
     margin-top: 50px;
+    margin-bottom: 20vh;
     
 }
 

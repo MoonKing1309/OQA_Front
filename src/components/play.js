@@ -1,6 +1,8 @@
 import './play.css';
 import elephant from '../img/elephant.jpeg';
 import { useEffect } from 'react';
+import Quiz from './quiz';
+import {Link} from 'react-router-dom'
 function Play(props)
 {
 
@@ -20,6 +22,7 @@ function Play(props)
 
         img.onmousemove = (event) => {
             img.addEventListener('mouseout', (event) => { })
+            
             if(window.screen.width>500)
             {
                 img.style.transitionDuration = '0s';
@@ -54,10 +57,6 @@ function Play(props)
 
             }
         
-        img.onmouseclick = (event) =>
-        {
-            //redirect to quiz page
-        }
         };
         }
         
@@ -67,9 +66,12 @@ function Play(props)
     return(
         <div className='container'>
             <div className='card' id='card'>
-                <div className='card-img-field'>
-                    <img className='card-img' src={elephant} alt="elephant"/>
-                </div>
+                <Link to='/Quiz'>
+                    <div className='card-img-field'>
+                        <img className='card-img' src={elephant} alt="elephant"/>
+                    </div>
+                </Link>
+                
                 <div className='card-text-field'>
                     <div className='card-text'>
                         <h2 className='card-text-title'>
@@ -82,9 +84,11 @@ function Play(props)
                 </div>
             </div>
             <div className='card' id='card'>
-                <div className='card-img-field'>
-                    <img className='card-img' src={elephant} alt="elephant"/>
-                </div>
+                <Link to='/Quiz'>
+                    <div className='card-img-field'>
+                        <img className='card-img' src={elephant} alt="elephant"/>
+                    </div>
+                </Link>
                 <div className='card-text-field'>
                     <div className='card-text'>
                         <h2 className='card-text-title'>
@@ -97,9 +101,11 @@ function Play(props)
                 </div>
             </div>
             <div className='card' id='card'>
-                <div className='card-img-field'>
-                    <img className='card-img' src={elephant} alt="elephant"/>
-                </div>
+                <Link to='/Quiz'>
+                    <div className='card-img-field'>
+                        <img className='card-img' src={elephant} alt="elephant"/>
+                    </div>
+                </Link>
                 <div className='card-text-field'>
                     <div className='card-text'>
                         <h2 className='card-text-title'>
@@ -112,9 +118,11 @@ function Play(props)
                 </div>
             </div>
             <div className='card' id='card'>
-                <div className='card-img-field'>
-                    <img className='card-img' src={elephant} alt="elephant"/>
-                </div>
+                <Link to='/Quiz'>
+                    <div className='card-img-field'>
+                        <img className='card-img' src={elephant} alt="elephant"/>
+                    </div>
+                </Link>
                 <div className='card-text-field'>
                     <div className='card-text'>
                         <h2 className='card-text-title'>
@@ -127,9 +135,11 @@ function Play(props)
                 </div>
             </div>
             <div className='card' id='card'>
-                <div className='card-img-field'>
-                    <img className='card-img' src={elephant} alt="elephant"/>
-                </div>
+                <Link to='/Quiz'>
+                    <div className='card-img-field'>
+                        <img className='card-img' src={elephant} alt="elephant"/>
+                    </div>
+                </Link>
                 <div className='card-text-field'>
                     <div className='card-text'>
                         <h2 className='card-text-title'>

@@ -1,11 +1,11 @@
 import './contact.css'
 
-function Contact(){
+function Contact(){ 
 
 
     return(
         <div className="content">
-            <h2>Send us a Message:</h2>
+            <h2 style={{color:'blueviolet' , fontWeight:'900'}}>Send us a Message</h2>
 
             <form action='mailto:conorken1@gmail.com' method="post" enctype="text/plain">
                 <table>

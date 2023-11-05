@@ -2,6 +2,7 @@ import style from './home.module.css'
 import clockimg from '../img/clockimg.avif'
 import newimg from '../img/newimg.avif'
 import cupimg from '../img/cupimg.jpg'
+import {Link} from 'react-router-dom'
 function Home() {
     return (  
         <div className={style.homebg}>
@@ -72,6 +73,10 @@ function Home() {
                 <h4>
                     Are you ready to challenge your mind, expand your horizons, and have some fun along the way? Look no further! ProjectName is here to provide you with a world of captivating quizzes that cater to every interest, age, and knowledge level.
                 </h4>
+                <div style={{width:"100%",display:'flex'}}>
+                    <Link id={style.login} to="/login">Log-In</Link>
+                </div>
+               
 
             </div>
         </div>

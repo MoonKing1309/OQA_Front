@@ -1,6 +1,7 @@
 .content
 {
     width: 100vw;
+    min-height: 100vh;
 }
 
 .quiz-title
@@ -48,4 +49,9 @@
 .prev
 {
     margin:auto auto;
+}
+
+#prev
+{
+    background-color: gray;
 }

@@ -1,0 +1,16 @@
+.options
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto auto;
+}
+
+.options input
+{
+    margin-right: 20px;
+}
+
+.option
+{
+    margin:auto auto;
+}

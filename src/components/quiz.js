@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState ,useRef } from 'react';
 import './quiz.css';
 import Question from './question'
 function Quiz(props)
 {
     const [quizid,setQuizid] = useState(props.quizId);
-    const [questionId,setquestionId] = useState(2);
+    const [questionId,setquestionId] = useState(0);
+    const [choices,setChoices] = useState(new Map());
+    const didMount = useRef(false);
 
     const prev = document.getElementById("prev");
 
@@ -16,21 +18,37 @@ function Quiz(props)
 
     function onPrev(){
         setquestionId(questionId-1)
-        if(questionId==0)
-        {
-            prev.setAttribute("disable","True")
-            prev.style.backgroundColor='gray';
-        }
     }
 
+    useEffect(()=>
+        {
+            if ( !didMount.current ) {
+                didMount.current = true;
+                return(() =>{})
+            }
+            if(questionId>0)
+            {
+                prev.removeAttribute("disabled")
+                prev.style.backgroundColor='blueviolet';
+            }
+            if(questionId==0)
+            {
+                prev.setAttribute("disabled","")
+                prev.style.backgroundColor='gray';
+            }
+            
+        },[questionId])
+        
+
     //client side logic to get the quiz details and question
+
     return(
         <div className='content'>
             <div className='quiz-title'>
                 <h1>props. quiz title</h1>
             </div>
             <div className='question-box'>
-                <Question quizId={1} questionId={1}/>
+                <Question quizId={1} questionId={1} choices={[choices,setChoices]}/>
             </div>
             <div className='navigation'>
                 <div className='prev'>

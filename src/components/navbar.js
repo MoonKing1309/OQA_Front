@@ -1,5 +1,6 @@
 import './navbar.css';
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
 function Navbar(props)
 {
 
@@ -12,16 +13,16 @@ function Navbar(props)
     return(
         <nav>
             <div className='nav-title-0'>
-                <a href='/home'><h1>ProjectName</h1></a>
+                <Link to='/home'><h1>ProjectName</h1></Link>
             </div>
             <div className='nav-body-0'>
                 <div className='nav-link-0'>
-                    <a href='/play' className='link'>Play</a>
-                    <a href='/contact' className='link'>Contact</a>
+                    <Link to='/play' className='link'>Play</Link>
+                    <Link to='/contact' className='link'>Contact</Link>
                 </div>
                 <div className='nav-buttons-0'>
-                    <a href='/signup'>Sign-Up</a> 
-                    <a href='/login'>Log-In</a>
+                    <Link to='/signup'>Sign-Up</Link> 
+                    <Link to='/login'>Log-In</Link>
                 </div>
             </div>
             
@@ -32,15 +33,15 @@ function Navbar(props)
     return(
         <nav>
             <div className='nav-title-1'>
-                <a href='/home'><h1>ProjectName</h1></a>
+                <Link to='/home'><h1>ProjectName</h1></Link>
             </div>
             <div className='nav-body-1'>
                 <div className='nav-link-1'>
-                    <a href='/play' className='link'>Play</a>
-                    <a href='/contact' className='link'>Contact</a>
+                    <Link to='/play' className='link'>Play</Link>
+                    <Link to='/contact' className='link'>Contact</Link>
                 </div>
                 <div className='nav-buttons-1'>
-                    <a href='/' onClick={handleLogOut}>Log-Out</a>
+                    <Link to='/' onClick={handleLogOut}>Log-Out</Link>
                 </div>
             </div>
         </nav>
