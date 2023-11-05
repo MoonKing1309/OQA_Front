@@ -12,16 +12,16 @@ function Navbar(props)
     return(
         <nav>
             <div className='nav-title-0'>
-                <a href='#'><h1>ProjectName</h1></a>
+                <a href='/home'><h1>ProjectName</h1></a>
             </div>
             <div className='nav-body-0'>
                 <div className='nav-link-0'>
-                    <a href='#' className='link'>Play</a>
-                    <a href='#' className='link'>Contact</a>
+                    <a href='/play' className='link'>Play</a>
+                    <a href='/contact' className='link'>Contact</a>
                 </div>
                 <div className='nav-buttons-0'>
-                    <a href='#'>Sign-Up</a> 
-                    <a href='#'>Log-In</a>
+                    <a href='/signup'>Sign-Up</a> 
+                    <a href='/login'>Log-In</a>
                 </div>
             </div>
             
@@ -32,15 +32,15 @@ function Navbar(props)
     return(
         <nav>
             <div className='nav-title-1'>
-                <a href='#'><h1>ProjectName</h1></a>
+                <a href='/home'><h1>ProjectName</h1></a>
             </div>
             <div className='nav-body-1'>
                 <div className='nav-link-1'>
-                    <a href='#' className='link'>Play</a>
-                    <a href='#' className='link'>Contact</a>
+                    <a href='/play' className='link'>Play</a>
+                    <a href='/contact' className='link'>Contact</a>
                 </div>
                 <div className='nav-buttons-1'>
-                    <a href='#' onClick={handleLogOut}>Log-Out</a>
+                    <a href='/' onClick={handleLogOut}>Log-Out</a>
                 </div>
             </div>
         </nav>
