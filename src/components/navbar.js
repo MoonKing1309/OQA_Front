@@ -3,13 +3,16 @@ import {useState} from 'react';
 import { Link } from 'react-router-dom';
 function Navbar(props)
 {
-
-    const [loginState,setLoginState] = useState(props.loginState)
+    const loginVal = props.loginState[0];
+    const setLoginVal = props.loginState[1];
+    
 
     function handleLogOut(){
-        setLoginState(0)
+        setLoginVal(0)
     }
-    if(loginState===0)
+
+    
+    if(loginVal===0)
     return(
         <nav>
             <div className='nav-title-0'>
@@ -17,6 +20,7 @@ function Navbar(props)
             </div>
             <div className='nav-body-0'>
                 <div className='nav-link-0'>
+                    <Link to='/' className='link'>Home</Link>
                     <Link to='/play' className='link'>Play</Link>
                     <Link to='/contact' className='link'>Contact</Link>
                 </div>
@@ -37,8 +41,10 @@ function Navbar(props)
             </div>
             <div className='nav-body-1'>
                 <div className='nav-link-1'>
+                    <Link to='/' className='link'>Home</Link>
                     <Link to='/play' className='link'>Play</Link>
                     <Link to='/contact' className='link'>Contact</Link>
+                    <Link to='/myaccount' className='link'>My Account</Link>
                 </div>
                 <div className='nav-buttons-1'>
                     <Link to='/' onClick={handleLogOut}>Log-Out</Link>

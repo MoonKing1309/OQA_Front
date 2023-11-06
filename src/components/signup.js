@@ -6,7 +6,7 @@ function Signup() {
             <div className='formbox'>
                 <h1>Signup</h1>
                 <form>
-                    <table>
+                    <table id='tableForm'>
                         <tr>
                             <td><label for='uname'><b>Username</b></label></td>
                             <td><input name='uname'></input></td>
@@ -33,4 +33,4 @@ function Signup() {
     )
 }
 
-export default Signup ;
+export default Signup ; 

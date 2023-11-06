@@ -4,7 +4,32 @@
     min-height: 100vh;
 }
 
-table
+#tableContact
 {
     margin: auto auto;
+}
+
+#tableContact label
+{
+    color: black;
+    font-weight: 800;
+}
+
+#tableContact  input
+{
+    outline: none;
+    border: 2px solid blueviolet;
+    height: 20px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+#tableContact  textarea
+{
+    outline: none;
+    border: 2px solid blueviolet;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
 }

@@ -1,0 +1,92 @@
+.container
+{
+    min-height: 100vh;
+
+    display:grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'details scores scores';
+}
+
+.container h1
+{
+    color : blueviolet;
+}
+
+.details
+{
+    text-align: center;
+    grid-area: details;
+}
+
+.details label
+{
+    color: black;
+    font-weight: 800;
+}
+
+.details  input
+{
+    outline: none;
+    border: 2px solid blueviolet;
+    height: 20px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+#confirmBtn
+{
+    padding: 10px 20px 10px 20px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 50px;
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px black;
+    margin: auto auto;
+    text-decoration: none;
+
+}
+
+#confirmBtn:active
+{
+    box-shadow: 0px 0px 2px black;
+    transform: scaleY(8px);
+    
+}
+
+#detailsTable
+{
+    margin : auto auto;
+}
+
+.scores
+{
+    grid-area: scores;
+    text-align: center;
+}
+
+.scoreTable
+{
+    margin:auto auto;
+    border-collapse: collapse;
+}
+
+.scoreTable th
+{
+    background-color: blueviolet;
+    
+}
+
+.scoreTable tr
+{
+    background-color: aliceblue;
+}
+
+.scoreTable td
+{
+    border:2px solid blueviolet;
+}

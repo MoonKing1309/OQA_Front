@@ -9,8 +9,9 @@ function Question(props) {
         setChoices(choices.set(key,value));
     }
 
-    const onSubmit =()=>
+    const onSubmit =(event)=>
     {
+        event.preventDefault()
         var radio = document.getElementsByName('options');
             for (let i = 0; i < radio.length; i++) {
                 if (radio[i].checked)
@@ -21,7 +22,7 @@ function Question(props) {
     }
   
     
-    return (
+    return ( 
         <div>
             Question goes here
 
@@ -60,7 +61,7 @@ function Question(props) {
 
                 </div>
                 <div className='option'>
-                        <button type='submit' onClick={onSubmit}>
+                        <button type='submit' id='btn' onClick={onSubmit}>
                             Confirm
                         </button>
                     </div>

@@ -8,20 +8,32 @@ import Login from './components/login';
 import Signup from './components/signup';
 import Home from './components/home';
 import Footer from './components/footer';
+import Myaccount from './components/myaccount';
+import Adminquiz from './components/adminquiz';
+
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+
+import {useState} from 'react'
+
 function App() {
+
+  const [loginVal,setLoginVal] = useState(0);
+  
+  //change from 0 to localstoage value to not logout after each refresh;
   return (
    <div>
       <Router>
-        <Navbar loginState={0}/>
+        <Navbar loginState={[loginVal,setLoginVal]}/>
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/home' element={<Home/>}></Route>
-          <Route path='/play' element={<Play/>}></Route>
+          <Route path='/' element={<Home loginState={[loginVal,setLoginVal]}/>}></Route>
+          <Route path='/home' element={<Home loginState={[loginVal,setLoginVal]}/>}></Route>
+          <Route path='/play' element={<Play loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
-          <Route path='/quiz' element={<Quiz/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/quiz' element={<Quiz loginState={[loginVal,setLoginVal]}/>}></Route>
+          <Route path='/login' element={<Login loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/signup' element={<Signup/>}></Route>
+          <Route path='/myaccount' element={<Myaccount/>}></Route>
+          <Route path='/adminQuiz' element={<Adminquiz />}></Route>
         </Routes>
         <Footer/>
       </Router>

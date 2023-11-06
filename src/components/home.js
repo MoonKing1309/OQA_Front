@@ -3,7 +3,31 @@ import clockimg from '../img/clockimg.avif'
 import newimg from '../img/newimg.avif'
 import cupimg from '../img/cupimg.jpg'
 import {Link} from 'react-router-dom'
-function Home() {
+function Home(props) {
+
+    const loginVal = props.loginState[0];
+    const setLoginVal = props.loginState[1];
+
+    function buttonReturn()
+    {
+        if(loginVal==0)
+        {
+            return '/login'
+        }
+        else{
+            return '/play'
+        }
+    }
+    function textReturn()
+    {
+        if(loginVal==0)
+        {
+            return 'Log-in'
+        }
+        else{
+            return 'Play Now'
+        }
+    }
     return (  
         <div className={style.homebg}>
             <div className={style.card1}>
@@ -65,16 +89,20 @@ function Home() {
             </div>
             <div className={style.textarea}>
                 <h1>
-                    Welcome to Project Name!
+                    Welcome to ,
                 </h1>
-                <h2>
+                <h1 id={style.bigText}>
+                    ProjectName
+                </h1>
+                <h1>
                     Unlock the Power of Knowledge
-                </h2>
-                <h4>
+                </h1>
+                <h3>
                     Are you ready to challenge your mind, expand your horizons, and have some fun along the way? Look no further! ProjectName is here to provide you with a world of captivating quizzes that cater to every interest, age, and knowledge level.
-                </h4>
+                </h3>
                 <div style={{width:"100%",display:'flex'}}>
-                    <Link id={style.login} to="/login">Log-In</Link>
+                    
+                    <Link id={style.login} to={buttonReturn()}>{textReturn()}</Link>
                 </div>
                
 
