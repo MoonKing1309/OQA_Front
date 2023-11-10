@@ -30,6 +30,19 @@ body
     display: block;
 }
 
+.cardAdmin
+{
+    width:300px;
+    height: 200px;
+    z-index: 0;
+    margin:50px auto;
+    cursor: pointer;
+    box-shadow: 0px 20px 1000px;
+    transition-property: transform;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+    display: block;
+}
 #cardHide
 {
     display: none;
@@ -104,7 +117,6 @@ body
     position: relative;
     margin: -40% auto;
     background-color: white;
-    color:black;
     border-width: 0px;
     border-style: outset;
     max-width: 70%;
@@ -112,6 +124,8 @@ body
     box-shadow: 0 30px 200px;
     overflow: hidden;
     transform: translateZ(50px);
+    text-align: center
+    ;
 }
 
 
@@ -123,8 +137,18 @@ body
 
 }
 
+.cardAdmin:hover .card-text-field 
+{
+    height: 70%;
+    border-width: 1px;
+    transition-duration: 0.3s;
+
+}
+
 .card-text-title
 {
-    font-weight: 700;
+    font-weight: 800;
+    text-align: center;
+    color: blueviolet;
 }
 

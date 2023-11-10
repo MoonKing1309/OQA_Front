@@ -8,7 +8,7 @@ function Myaccount(props) {
                 <table id={style.detailsTable}>
                     <tbody>
                         <tr>
-                            <td>
+                            <td> 
                                 <label htmlFor='uname'>
                                     Username
                                 </label>

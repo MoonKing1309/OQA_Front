@@ -17,8 +17,8 @@ import {useState} from 'react'
 
 function App() {
 
-  const [loginVal,setLoginVal] = useState(0);
-  
+  const [loginVal,setLoginVal] = useState(1);
+  // const [quizData, setQuizData] = useState();quizState={[quizData,setQuizData]}
   //change from 0 to localstoage value to not logout after each refresh;
   return (
    <div>
@@ -29,11 +29,11 @@ function App() {
           <Route path='/home' element={<Home loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/play' element={<Play loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
-          <Route path='/quiz' element={<Quiz loginState={[loginVal,setLoginVal]}/>}></Route>
+          <Route path='/play/Quiz/:id' element={<Quiz loginState={[loginVal,setLoginVal]} />}></Route>
           <Route path='/login' element={<Login loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/signup' element={<Signup/>}></Route>
           <Route path='/myaccount' element={<Myaccount/>}></Route>
-          <Route path='/adminQuiz' element={<Adminquiz />}></Route>
+          <Route path='play/adminQuiz' element={<Adminquiz loginState={[loginVal,setLoginVal]}/>}></Route>
         </Routes>
         <Footer/>
       </Router>

@@ -164,7 +164,7 @@ nav
 
 }
 
-@media only screen and (max-width:400px)
+@media only screen and (max-width:500px)
 {
     nav
     {
@@ -181,6 +181,11 @@ nav
     {
         margin-right: 5px;
         padding:3px;
+    }
+
+    #hideSmallScreen
+    {
+        display: none;
     }
 
 }

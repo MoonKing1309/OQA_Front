@@ -20,7 +20,7 @@ function Navbar(props)
             </div>
             <div className='nav-body-0'>
                 <div className='nav-link-0'>
-                    <Link to='/' className='link'>Home</Link>
+                    <Link to='/' className='link' id='hideSmallScreen'>Home</Link>
                     <Link to='/play' className='link'>Play</Link>
                     <Link to='/contact' className='link'>Contact</Link>
                 </div>
@@ -41,7 +41,7 @@ function Navbar(props)
             </div>
             <div className='nav-body-1'>
                 <div className='nav-link-1'>
-                    <Link to='/' className='link'>Home</Link>
+                    <Link to='/' className='link' id='hideSmallScreen'>Home</Link>
                     <Link to='/play' className='link'>Play</Link>
                     <Link to='/contact' className='link'>Contact</Link>
                     <Link to='/myaccount' className='link'>My Account</Link>
