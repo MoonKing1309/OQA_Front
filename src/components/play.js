@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import Quiz from './quiz';
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { add } from 'mathjs';
 function Play(props) {
     const loginVal = props.loginState[0];
     const setLoginVal = props.loginState[1];
