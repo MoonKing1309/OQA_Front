@@ -3,6 +3,7 @@ import './quiz.css';
 import Question from './question'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Adminquiz from './adminquiz';
+import axios from 'axios';
 function Quiz(props)
 {
     const [quizid,setQuizid] = useState(props.quizId);
@@ -22,12 +23,27 @@ function Quiz(props)
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
 
+    const [statequizData,setStateQuizData] = useState()
+    const [quesData,setQuesData] = useState()
+    async function getQuiz() {
+        try {
+            const data = await axios(`http://localhost:5001/play/adminEditQuiz/${id}`);
+            setStateQuizData(data.data.msg[0]);
+            setQuesData(data.data.msg[1]);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(()=>{
+        getQuiz()
+    },[])
+
     function onEdit(){
-        navigate('adminQuiz')
+        navigate(`/play/adminEditQuiz/${id}`,{state:[statequizData,quesData]})
     }
 
     function onNext(){
-        console.log(Number(quizData[0]))
         if(questionId <Number(quizData[0].quesCount)-1)
             setquestionId(questionId+1)
         //remeber to blackout the button if questionnumber reaches upper limit
@@ -42,8 +58,20 @@ function Quiz(props)
     }
 
     function onSubmit(){
-        
+        //redirect to result.js
     }
+
+   async function onDelete (){
+    try{
+        await axios.delete(`http://localhost:5001/play/Quiz/${id}`)
+        navigate('/play')
+    }
+    catch(error)
+    {
+        console.log(error)
+    }
+   
+   }
 
     const radio = document.getElementsByName("options");
 
@@ -67,13 +95,11 @@ function Quiz(props)
             {
                 next.style.backgroundColor='Yellowgreen';
                 next.innerText='Submit'
-                next.onclick={onSubmit}
             }
             if(questionId < Number(quizData[0].quesCount)-1)
             {
                 next.removeAttribute("disabled")
                 next.innerText='Next'
-                next.onclick={onNext}
                 next.style.backgroundColor='blueviolet';
             }
             
@@ -88,7 +114,7 @@ function Quiz(props)
     return(
         <div className='content'>
             <div className='quiz-title'>
-                <h1>{quizData[0].quizTitle}<button className='edit' style={{display:(loginVal>0)? 'inline-block':'none'}} onClick={onEdit}> Edit</button></h1>
+                <h1>{quizData[0].quizTitle}<button className='edit' style={{display:(loginVal>0)? 'inline-block':'none'}} onClick={onEdit}> Edit</button><button className='delete' style={{display:(loginVal>0)? 'inline-block':'none'}} onClick={onDelete}> Delete</button></h1>
                 
             </div>
             <div className='question-box'>
@@ -101,7 +127,7 @@ function Quiz(props)
                     </button>
                 </div>
                 <div className='next'>
-                    <button onClick={onNext} id='next'>
+                    <button onClick={(questionId == Number(quizData[0].quesCount)-1)?(onSubmit):(onNext)} id='next'>
                         Next
                     </button>
                 </div>

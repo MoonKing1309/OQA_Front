@@ -137,14 +137,7 @@ function Adminquiz(props) {
                             </td> 
                             
                         </tr>
-                        {/* <tr>
-                            <td>
-                            <label htmlFor='qcount'>Number of Questions</label>
-                            </td>
-                            <td>
-                                <td><input name='qcount' value={qcount}></input></td>
-                            </td>
-                        </tr> */}
+                        
                         {Array.from(Array(qcount)).map((c, index) => {
                             //try to implement remove question button
                             return (

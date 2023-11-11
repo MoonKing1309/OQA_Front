@@ -62,6 +62,10 @@ body
     display: block;
 }
 
+.card .card-text-field{
+    pointer-events: none;
+}
+
 @media only screen and (max-width:500px)
 {
     .card
@@ -70,6 +74,15 @@ body
     }
 
     .card-text-field
+    {
+        
+        z-index: 3;
+        position: relative;
+        height: 70% !important;
+        margin-top:-50% !important;
+        margin-right:-20% !important;
+    }
+    .card-text-fieldAdmin
     {
         
         z-index: 3;
@@ -127,6 +140,23 @@ body
     text-align: center
     ;
 }
+.card-text-fieldAdmin
+{
+    
+    z-index: 3;
+    position: relative;
+    margin: -40% auto;
+    background-color: white;
+    border-width: 0px;
+    border-style: outset;
+    max-width: 70%;
+    height: 0%;
+    box-shadow: 0 30px 200px;
+    overflow: hidden;
+    transform: translateZ(50px);
+    text-align: center
+    ;
+}
 
 
 .card:hover .card-text-field 
@@ -137,7 +167,7 @@ body
 
 }
 
-.cardAdmin:hover .card-text-field 
+.cardAdmin:hover .card-text-fieldAdmin
 {
     height: 70%;
     border-width: 1px;

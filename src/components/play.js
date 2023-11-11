@@ -18,7 +18,7 @@ function Play(props) {
     async function getQuiz() {
         await axios.get('http://localhost:5001/play').then((data) =>{
             const tempData = data.data;
-            setQuizData(tempData);
+            setQuizData(tempData); 
 
         } ).catch((err) => console.log(err))
     }
@@ -83,6 +83,7 @@ function Play(props) {
             img.onclick = (event) =>{
                 onImgClick(event)
             }
+            
         };
         const adminImages = document.getElementsByClassName("cardAdmin")
         let adminImage = adminImages[0];
@@ -139,7 +140,7 @@ function Play(props) {
         <div className='container' id='container'>
             <div className='cardAdmin' id={addQuiz()}>
                     <div className='card-img-fieldAdmin'></div>
-                <div className='card-text-field'>
+                <div className='card-text-fieldAdmin'>
                     <div className='card-text'>
                         <h2 className='card-text-title'>
                             Add Quiz

@@ -10,6 +10,7 @@ import Home from './components/home';
 import Footer from './components/footer';
 import Myaccount from './components/myaccount';
 import Adminquiz from './components/adminquiz';
+import AdminEditQuiz from './components/adminEditQuiz';
 
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/signup' element={<Signup/>}></Route>
           <Route path='/myaccount' element={<Myaccount/>}></Route>
           <Route path='play/adminQuiz' element={<Adminquiz loginState={[loginVal,setLoginVal]}/>}></Route>
+          <Route path='play/adminEditQuiz/:id' element={<AdminEditQuiz/>}></Route>
         </Routes>
         <Footer/>
       </Router>

@@ -139,7 +139,6 @@ function Question(props) {
     useEffect(()=>{
         if(!choices.has(questionId))
         {
-            console.log('here')
             for (let i = 0; i < radio.length; i++) {
                 radio[i].checked = false;
 

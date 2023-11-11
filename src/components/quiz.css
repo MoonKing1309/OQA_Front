@@ -60,6 +60,26 @@
     transform: scaleY(7px);
 }
 
+.delete
+{
+    padding: 10px 20px 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px black;
+    margin-left: 20px;
+}
+
+.delete:active
+{
+    box-shadow: 0px 0px 3px black;
+    transform: scaleY(7px);
+}
+
+
 .next
 {
     margin: auto auto;
