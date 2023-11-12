@@ -101,7 +101,7 @@ function AdminEditQuiz(){
             console.log("quizJson",quizJson)
             console.log("questionJson",questionJson)
             try {
-            await axios.put(`http://localhost:5001/play/adminEditQuiz/${id}`,{
+            await axios.put(`https://qmi.onrender.com/play/adminEditQuiz/${id}`,{
                 quizJson,
                 questionJson
             },{ 

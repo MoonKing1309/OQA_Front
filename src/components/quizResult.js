@@ -31,7 +31,7 @@ function QuizResult(props) {
     const getResult = async ()=>{
         try {
             
-            await axios.get(`http://localhost:5001/play/Quiz/${id}/result`).then((data)=>correctChoice = data.data).catch((err)=>console.log(err))
+            await axios.get(`https://qmi.onrender.com/play/Quiz/${id}/result`).then((data)=>correctChoice = data.data).catch((err)=>console.log(err))
             console.log(correctChoice,userChoices[0])
             for(let i=0;i<correctChoice.length;i++)
             {
@@ -54,7 +54,7 @@ function QuizResult(props) {
     },[])
 
     async function getQuiz() {
-        await axios.get('http://localhost:5001/play').then((data) =>{
+        await axios.get('https://qmi.onrender.com/play').then((data) =>{
             const tempData = data.data;
             navigate(`/play/Quiz/${id}`,{state:tempData.filter((item)=> item._id==id)})
         } ).catch((err) => console.log(err))
@@ -64,7 +64,7 @@ function QuizResult(props) {
         var circleLoader = document.querySelector(`.${style.circleLoader}`)
         circleLoader.style.display='inline-block'
         try {
-            await axios.post(`http://localhost:5001/play/Quiz/${id}/result`,{userID:loginVal,userScore:`${score}/${total}`})
+            await axios.post(`https://qmi.onrender.com/play/Quiz/${id}/result`,{userID:loginVal,userScore:`${score}/${total}`})
                 .then(()=>{
                     circleLoader.style.display='none'
                 })

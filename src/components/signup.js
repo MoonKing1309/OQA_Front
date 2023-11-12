@@ -28,7 +28,7 @@ function Signup() {
             circleLoader.style.display='inline-block'
         }
         try {
-            await axios.post(`http://localhost:5001/signup`,{uname,pwd})
+            await axios.post(`https://qmi.onrender.com/signup`,{uname,pwd})
                 .then((res)=>{
                     console.log(res.status)
                     if(res.status==201)

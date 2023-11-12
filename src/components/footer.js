@@ -16,7 +16,7 @@ function Footer() {
                     <h1>Leave a Review</h1>
                     <p>
                         <Link to='/contact'>Email us</Link> <br></br> <br></br>  
-                        Ph no : +xyz abc
+                        Ph no : +91 75986 94719
                     </p>
                 </div>
                 

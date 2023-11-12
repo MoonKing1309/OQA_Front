@@ -18,7 +18,7 @@ function Myaccount(props) {
 
             var newUserName = document.getElementById("newUserName").value
             var newPwd = document.getElementById("newPwd").value
-            await axios.put('http://localhost:5001/myaccount',{id:loginVal,newUserName:newUserName,newPwd:newPwd})
+            await axios.put('https://qmi.onrender.com/myaccount',{id:loginVal,newUserName:newUserName,newPwd:newPwd})
                 .then((done)=>{
                     
                     
@@ -36,7 +36,7 @@ function Myaccount(props) {
 
    const getQuizDetails = async ()=>{
         try {
-            await axios.post(`http://localhost:5001/myaccount`,{userID:loginVal})
+            await axios.post(`https://qmi.onrender.com/myaccount`,{userID:loginVal})
                 .then((data)=>{ 
                     setDetailsArray(data.data.msg)
                 })
@@ -48,7 +48,7 @@ function Myaccount(props) {
    }
    const getAllQuizDetails = async ()=>{
     try {
-        await axios.post(`http://localhost:5001/myaccount`,{userID:"1"})
+        await axios.post(`https://qmi.onrender.com/myaccount`,{userID:"1"})
             .then((data)=>{ 
                 setDetailsArray(data.data.msg)
             })
@@ -61,7 +61,7 @@ function Myaccount(props) {
 
     const getUserDetails = async ()=>{ 
         try{
-            await axios.get(`http://localhost:5001/myaccount/${loginVal}`)
+            await axios.get(`https://qmi.onrender.com/myaccount/${loginVal}`)
                 .then((data)=>{
                     setUserDetails(data.data.msg)
                 })

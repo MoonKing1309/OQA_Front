@@ -32,7 +32,7 @@ function Question(props) {
     }
 
     async function getQuestion() {
-        await axios.get(`http://localhost:5001/play/Quiz/${id}`).then((data) => setQuesData(data.data)).catch((err) => console.log(err))
+        await axios.get(`https://qmi.onrender.com/play/Quiz/${id}`).then((data) => setQuesData(data.data)).catch((err) => console.log(err))
     }
     useEffect(()=>{
         try {  

@@ -15,7 +15,7 @@ function Play(props) {
     const container = document.getElementById("container")
 
     async function getQuiz() {
-        await axios.get('http://localhost:5001/play').then((data) =>{
+        await axios.get('https://qmi.onrender.com/play').then((data) =>{
             const tempData = data.data;
             setQuizData(tempData); 
 

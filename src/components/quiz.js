@@ -27,7 +27,7 @@ function Quiz(props)
     const [quesData,setQuesData] = useState()
     async function getQuiz() {
         try {
-            const data = await axios(`http://localhost:5001/play/adminEditQuiz/${id}`);
+            const data = await axios(`https://qmi.onrender.com/play/adminEditQuiz/${id}`);
             setStateQuizData(data.data.msg[0]);
             setQuesData(data.data.msg[1]);
         } catch (error) {
@@ -63,7 +63,7 @@ function Quiz(props)
 
    async function onDelete (){
     try{
-        await axios.delete(`http://localhost:5001/play/Quiz/${id}`)
+        await axios.delete(`https://qmi.onrender.com/play/Quiz/${id}`)
         navigate('/play')
     }
     catch(error)
