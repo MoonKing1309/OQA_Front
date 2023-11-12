@@ -33,7 +33,7 @@ function Signup() {
                     if(res.status==201)
                     {
                         setTimeout(()=>{
-                            navigate('/play')
+                            navigate('/home')
                             },1500)
                         
                     }
