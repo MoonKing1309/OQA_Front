@@ -15,7 +15,6 @@ function Question(props) {
         
         const updateMap = (key,value)=>{
             setChoices(choices.set(key,value));
-            console.log(choices)
         }
 
     const radio = document.getElementsByName("options");
@@ -170,32 +169,31 @@ function Question(props) {
             <form>
                 <div className='options'>
                     <div className='option'>
-                        {/* replace ooption text with backend value */}
-                        <input type='radio' id='a' name='options' ></input>
-                        <label htmlFor='a'>
+                        <input type='radio' id='optionA' name='options' ></input>
+                        <label htmlFor='optionA'>
                             {displayOptionA()}
                         </label>
                     </div>
 
                     <div className='option'>
-                        <input type='radio' id='b' name='options'></input>
-                        <label htmlFor='b'>
+                        <input type='radio' id='optionB' name='options'></input>
+                        <label htmlFor='optionB'>
                             {displayOptionB()}
                         </label>
                         
                     </div>
 
                     <div className='option'>
-                        <input type='radio' id='c' name='options'></input>
-                        <label htmlFor='c'>
+                        <input type='radio' id='optionC' name='options'></input>
+                        <label htmlFor='optionC'>
                             {displayOptionC()}
                         </label>
                         
                     </div>
 
                     <div className='option'>
-                        <input type='radio' id='d' name='options'></input>
-                        <label htmlFor='D'>
+                        <input type='radio' id='optionD' name='options'></input>
+                        <label htmlFor='optionD'>
                             {displayOptionD()}
                         </label>
                     </div>

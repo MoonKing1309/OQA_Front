@@ -107,11 +107,11 @@ function AdminEditQuiz(){
             },{ 
                 headers: {
                     'Content-Type': 'application/json'
-                }})                     }
-                // .then((res)=>{
-                    // setAdd(1)
-                    // navigate('/play')
-                // }).catch((rej)=>navigate("/play"))}
+                }}).then((res)=>{
+                    setAdd(1)
+                    navigate('/play')
+                })
+                .catch((rej)=>navigate("/play"))}
             catch (error) {
             console.log(error)
         }

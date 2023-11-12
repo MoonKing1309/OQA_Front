@@ -6,12 +6,12 @@ import Adminquiz from './adminquiz';
 import axios from 'axios';
 function Quiz(props)
 {
-    const [quizid,setQuizid] = useState(props.quizId);
+    const {id} = useParams();
+    const [quizid,setQuizid] = useState(id);
     const [questionId,setquestionId] = useState(0);
     const [choices,setChoices] = useState(new Map());
     const didMount = useRef(false);
     const navigate = useNavigate()
-    const {id} = useParams();
 
     const location =useLocation();
     const [quizData,setQuizData] = useState(location.state)
@@ -58,7 +58,7 @@ function Quiz(props)
     }
 
     function onSubmit(){
-        //redirect to result.js
+        navigate(`result`,{state:choices})
     }
 
    async function onDelete (){
@@ -114,7 +114,7 @@ function Quiz(props)
     return(
         <div className='content'>
             <div className='quiz-title'>
-                <h1>{quizData[0].quizTitle}<button className='edit' style={{display:(loginVal>0)? 'inline-block':'none'}} onClick={onEdit}> Edit</button><button className='delete' style={{display:(loginVal>0)? 'inline-block':'none'}} onClick={onDelete}> Delete</button></h1>
+                <h1>{quizData[0].quizTitle}<button className='edit' style={{display:(loginVal==1)? 'inline-block':'none'}} onClick={onEdit}> Edit</button><button className='delete' style={{display:(loginVal==1)? 'inline-block':'none'}} onClick={onDelete}> Delete</button></h1>
                 
             </div>
             <div className='question-box'>

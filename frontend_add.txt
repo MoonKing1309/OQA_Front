@@ -1,4 +1,0 @@
-git commit -m "moonking commit"
-git branch -M main
-git remote add origin https://github.com/MoonKing1309/OQA_Front.git
-git push -u origin main

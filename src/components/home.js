@@ -34,7 +34,7 @@ function Home(props) {
                 <div>
                     <div className={style.card}>
                     <div className={style.cardImgField} >
-                        <img className={style.cardImg} src={cupimg} alt="elephant"/>
+                        <img className={style.cardImg} src={cupimg} alt="cup"/>
                     </div>
                     <div className={style.cardTextField}>
                         <div className={style.cardText}>
@@ -53,7 +53,7 @@ function Home(props) {
                 <div>
                         <div className={style.card}>
                         <div className={style.cardImgField} >
-                            <img className={style.cardImg} src={clockimg} alt="elephant"/>
+                            <img className={style.cardImg} src={clockimg} alt="clock"/>
                         </div>
                         <div className={style.cardTextField}>
                             <div className={style.cardText}>
@@ -72,7 +72,7 @@ function Home(props) {
             <div>
                         <div className={style.card}>
                         <div className={style.cardImgField} >
-                            <img className={style.cardImg} src={newimg} alt="elephant"/>
+                            <img className={style.cardImg} src={newimg} alt="rnd"/>
                         </div>
                         <div className={style.cardTextField}>
                             <div className={style.cardText}>
@@ -88,15 +88,15 @@ function Home(props) {
                     </div>
             </div>
             <div className={style.textarea}>
-                <h1>
+                <h2>
                     Welcome to ,
-                </h1>
+                </h2>
                 <h1 id={style.bigText}>
-                    ProjectName
+                    Qmi
                 </h1>
-                <h1>
+                <h2>
                     Unlock the Power of Knowledge
-                </h1>
+                </h2>
                 <h3>
                     Are you ready to challenge your mind, expand your horizons, and have some fun along the way? Look no further! ProjectName is here to provide you with a world of captivating quizzes that cater to every interest, age, and knowledge level.
                 </h3>

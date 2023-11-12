@@ -94,8 +94,11 @@ function Play(props) {
         , [quizData]
     )
     const onImgClick = (event)=>{
-
-        navigate(`/play/Quiz/${event.target.name}`,{state:quizData.filter((item)=> item._id==event.target.name)})
+        if(loginVal==0){
+            navigate('/login')
+        }
+        else
+            navigate(`/play/Quiz/${event.target.name}`,{state:quizData.filter((item)=> item._id==event.target.name)})
     }
     const images = document.getElementsByClassName('card-img-field');
     

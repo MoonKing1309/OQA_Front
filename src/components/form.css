@@ -1,13 +1,13 @@
 
-
 .formbox
 {
-    box-shadow: 1px 5px 10px black;
+    box-shadow: 1px 5px 20px black;
     width: 500px;
     margin: auto auto;
     height: 600px;
     margin-top: 50px;
     margin-bottom: 20vh;
+    background-color: aliceblue;
     
 }
 
@@ -37,12 +37,12 @@
     border: 2px solid blueviolet;
     height: 20px;
     border-radius: 30px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 td,tr
 {
-    padding: 20px 10px 20px 10px;
+    padding: 20px 20px 20px 20px;
     text-align: center;
 }
 
@@ -52,21 +52,35 @@ td,tr
 
 }
 
-#btn
-{
-    padding: 10px 20px 10px 20px;
-    background-color: blueviolet;
-    border: none;
-    border-radius: 50px;
-    color:white;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0px 3px 10px black;
-    text-decoration: none;
+
+.circle-loader {
+    margin-top: 8px;
+  margin-left: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-left-color: #5cb85c;
+  animation: loader-spin 1.2s infinite linear;
+  position: absolute;
+  display: none;
+  vertical-align: top;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 
-#btn:active
-{
-    box-shadow: 0px 0px 3px black;
-    transform: scaleY(7px);
+.load-complete {
+  -webkit-animation: none;
+  animation: none;
+  border-color: #5cb85c;
+  transition: border 500ms ease-out;
 }
+
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

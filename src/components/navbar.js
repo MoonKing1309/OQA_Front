@@ -16,7 +16,7 @@ function Navbar(props)
     return(
         <nav>
             <div className='nav-title-0'>
-                <Link to='/home'><h1>ProjectName</h1></Link>
+                <Link to='/home'><h1>Qmi</h1></Link>
             </div>
             <div className='nav-body-0'>
                 <div className='nav-link-0'>
@@ -37,7 +37,7 @@ function Navbar(props)
     return(
         <nav>
             <div className='nav-title-1'>
-                <Link to='/home'><h1>ProjectName</h1></Link>
+                <Link to='/home'><h1>Qmi</h1></Link>
             </div>
             <div className='nav-body-1'>
                 <div className='nav-link-1'>
