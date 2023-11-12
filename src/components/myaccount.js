@@ -101,7 +101,6 @@ function Myaccount(props) {
     },[])
 
     useEffect(()=>{
-        console.log(userDetails)
     },[userDetails])
 
 

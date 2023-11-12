@@ -30,7 +30,6 @@ function Signup() {
         try {
             await axios.post(`https://qmi.onrender.com/signup`,{uname,pwd})
                 .then((res)=>{
-                    console.log(res.status)
                     if(res.status==201)
                     {
                         setTimeout(()=>{

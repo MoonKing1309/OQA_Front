@@ -15,6 +15,7 @@ function Question(props) {
         
         const updateMap = (key,value)=>{
             setChoices(choices.set(key,value));
+            console.log("choices")
         }
 
     const radio = document.getElementsByName("options");

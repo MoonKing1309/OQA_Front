@@ -28,7 +28,6 @@ function Play(props) {
 
     useEffect(() => {
         if (quizData) {
-            console.log(quizData)
             addAllQuiz(quizData)
         }
     }, [,quizData])

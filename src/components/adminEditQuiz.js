@@ -15,8 +15,6 @@ function AdminEditQuiz(){
     const [qcount, setQcount] = useState(quizData[0].quesCount);
     const [newqcount,setNewqcount] = useState(0)
     var count=qcount
-    console.log('quizdata',quizData)
-    console.log('quesdata',quesData)
     const addRow = () => {
         if(qcount>0)
             setNewqcount(newqcount + 1)
@@ -98,8 +96,6 @@ function AdminEditQuiz(){
                 quesCount:qcount+newqcount
             }
 
-            console.log("quizJson",quizJson)
-            console.log("questionJson",questionJson)
             try {
             await axios.put(`https://qmi.onrender.com/play/adminEditQuiz/${id}`,{
                 quizJson,

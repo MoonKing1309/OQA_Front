@@ -17,11 +17,11 @@ function QuizResult(props) {
 
     const updateScore =()=>{
         setScore(score => score+1)
-        console.log("new score is : " , score)
+
     }
     const updateTotal =()=>{
         setTotal(total => total+1)
-        console.log("new score is : " , total)
+
     }
     
     let correctChoice =[]

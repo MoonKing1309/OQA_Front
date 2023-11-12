@@ -25,12 +25,10 @@ export default function Login(props){
         }
         else
         {
-            console.log(uname,pwd)
             circleLoader.style.display='inline-block'
             try {
                 await axios.post(`https://qmi.onrender.com/login`,{uname,pwd})
                     .then((res)=>{
-                        console.log(res.status)
                         if(res.status==201)
                         {
                             console.log(res.data.msg)
