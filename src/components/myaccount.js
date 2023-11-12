@@ -172,7 +172,6 @@ function Myaccount(props) {
                                 <th>Date</th>
                             </tr>
                             {detailsArray.map((item,index)=>{
-                                console.log(item);
                                 return(
                                 <tr>
                                     <td key={index+10}>{item.userName}</td>

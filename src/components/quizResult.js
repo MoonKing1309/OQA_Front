@@ -7,7 +7,6 @@ import axios from 'axios';
 function QuizResult(props) {
     const loginVal = props.loginState[0];
     const setLoginVal = props.loginState[1];
-    console.log('loginVal',loginVal)
     const navigate = useNavigate();
     const location = useLocation();
     const {id} = useParams()

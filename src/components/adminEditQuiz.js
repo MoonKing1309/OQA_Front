@@ -22,7 +22,6 @@ function AdminEditQuiz(){
             
     }
 
-    // console.log('count outside' ,count)
     const patchQuiz = async (event) =>{
         event.preventDefault()
         if(add!=1)
@@ -35,7 +34,6 @@ function AdminEditQuiz(){
             const optioninputs = document.getElementsByClassName('optionInputs');
             const radioinputs = document.getElementsByClassName('radioInputs')
     
-            // console.log(radioinputs)
             
             let question =[];
             let optionA = [];
@@ -262,10 +260,7 @@ function AdminEditQuiz(){
                     :console.log()}
                         {
                         Array.from(Array(newqcount)).map((c, index) => {
-                            // console.log("at start qcount is :" ,qcount)
-                            // console.log("at start count is :" ,count)
-                            // console.log("at start index is :" ,index)
-                            // console.log("at start newqcount is :" ,newqcount)
+        
                             return (
                                 <>
                                 <tr>
