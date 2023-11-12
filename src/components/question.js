@@ -146,13 +146,13 @@ function Question(props) {
         }
         else
         {
-            if(choices.get(questionId)=='a'){
+            if(choices.get(questionId)=='optionA'){
                 radio[0].checked = true;
             }
-            else if(choices.get(questionId)=='b'){
+            else if(choices.get(questionId)=='optionB'){
                 radio[1].checked = true;
             }
-            else if(choices.get(questionId)=='c'){
+            else if(choices.get(questionId)=='optionC'){
                 radio[2].checked = true;
             }
             else {

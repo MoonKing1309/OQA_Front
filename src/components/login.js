@@ -31,7 +31,6 @@ export default function Login(props){
                     .then((res)=>{
                         if(res.status==201)
                         {
-                            console.log(res.data.msg)
                             setTimeout(()=>{
                                 setLoginVal(res.data.msg)
                                 navigate('/play')
