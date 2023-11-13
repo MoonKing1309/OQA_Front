@@ -8,6 +8,7 @@ function Navbar(props)
     
 
     function handleLogOut(){
+        localStorage.setItem('loginVal', JSON.stringify(0));
         setLoginVal(0)
     }
 

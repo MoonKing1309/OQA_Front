@@ -21,6 +21,8 @@ export default function Login(props){
         if(uname=='root' && pwd=='root')
         {
             setLoginVal(1);
+            localStorage.setItem('loginVal', JSON.stringify(1));
+            console.log("in login.js",localStorage)
             navigate('/home')
         }
         else
@@ -33,6 +35,7 @@ export default function Login(props){
                         {
                             setTimeout(()=>{
                                 setLoginVal(res.data.msg)
+                                localStorage.setItem('loginVal', JSON.stringify(res.data.msg));
                                 navigate('/play')
                                 },1500)
                             

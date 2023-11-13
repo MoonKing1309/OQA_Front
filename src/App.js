@@ -15,13 +15,21 @@ import QuizResult from './components/quizResult';
 
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 function App() {
 
   const [loginVal,setLoginVal] = useState(0);
   // const [quizData, setQuizData] = useState();quizState={[quizData,setQuizData]}
   //change from 0 to localstoage value to not logout after each refresh;
+  
+  useEffect(() => {
+    console.log("in app.js",localStorage)
+    const items = JSON.parse(localStorage.getItem('loginVal'));
+    if (items) {
+     setLoginVal(items);
+    }
+  }, []);
   return (
    <div>
       <Router>
