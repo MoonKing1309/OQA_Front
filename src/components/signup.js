@@ -2,9 +2,11 @@ import axios from "axios";
 import "./form.css";
 import {  useNavigate } from "react-router-dom";
 
-function Signup() {
+function Signup(props) {
 
     const navigate = useNavigate()
+    const loginVal = props.loginState[0];
+    const setLoginVal = props.loginState[1];
 
     const onSubmit = async (event)=>{
         event.preventDefault()
@@ -32,9 +34,18 @@ function Signup() {
                 .then((res)=>{
                     if(res.status==201)
                     {
-                        setTimeout(()=>{
-                            navigate('/home')
-                            },1500)
+                        axios.post(`https://qmi.onrender.com/login`,{uname,pwd})
+                        .then((res)=>{
+                            if(res.status==201)
+                            {
+                                setTimeout(()=>{
+                                    setLoginVal(res.data.msg)
+                                    localStorage.setItem('loginVal', JSON.stringify(res.data.msg));
+                                    navigate('/play')
+                                    },500)
+                                
+                            }
+                    })
                         
                     }
                 })
