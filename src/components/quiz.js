@@ -3,6 +3,7 @@ import './quiz.css';
 import Question from './question'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Adminquiz from './adminquiz';
+import Timer from './timer';
 import axios from 'axios';
 function Quiz(props)
 {
