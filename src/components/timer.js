@@ -8,7 +8,6 @@ function Timer(props) {
     
 
     useEffect(()=>{
-        document.getElementById(style.content).classList.add(style.contentShow)
         setInterval(()=>{
             setTime(time=>time+1);
         },1000)
