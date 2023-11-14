@@ -179,7 +179,7 @@ function Myaccount(props) {
                                     <td key={index+11}>{item.quizName}</td>
                                     <td key={index+12}>{item.userScore}</td>
                                      <td key={index+13}>{item.quizTime}</td>
-                                    <td key={index+14}>{item.quizDate}</td
+                                    <td key={index+14}>{item.quizDate}</td>
                                 </tr>) 
                             }) 
                         }
