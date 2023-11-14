@@ -20,6 +20,8 @@ function Quiz(props)
     const loginVal = props.loginState[0];
     const setLoginVal = props.loginState[1];
 
+     const [time,setTime] = useState(0)
+
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
 
@@ -58,7 +60,7 @@ function Quiz(props)
     }
 
     function onSubmit(){
-        navigate(`result`,{state:choices})
+        navigate(`result`,{state:[choices,time]})
     }
 
    async function onDelete (){
@@ -113,6 +115,9 @@ function Quiz(props)
  
     return(
         <div className='content'>
+            <div className='timerBox'>
+                <Timer time={[time,setTime]}/>
+            </div>
             <div className='quiz-title'>
                 <h1>{quizData[0].quizTitle}<button className='edit' style={{display:(loginVal==1)? 'inline-block':'none'}} onClick={onEdit}> Edit</button><button className='delete' style={{display:(loginVal==1)? 'inline-block':'none'}} onClick={onDelete}> Delete</button></h1>
                 
