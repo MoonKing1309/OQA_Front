@@ -92,7 +92,7 @@ function Home(props) {
                     Welcome to ,
                 </h2>
                 <h1 id={style.bigText}>
-                    Qmi
+                    Quizzmi
                 </h1>
                 <h2>
                     Unlock the Power of Knowledge
