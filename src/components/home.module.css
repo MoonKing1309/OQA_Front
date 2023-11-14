@@ -9,10 +9,11 @@
     background-image: url('https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?auto=format&fit=crop&q=80&w=2800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     overflow-y: scroll;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows:repeat(2,1fr);
+    grid-template-rows:repeat(3,1fr);
     grid-template-areas:
-    "card1 txtarea"
-    "card2 card3"
+    "txtarea card1"
+    "txtarea card2"
+    "txtarea card3"
 }
 
 
@@ -124,6 +125,7 @@
     grid-area: txtarea;
     color:navy;
     font-weight: 800;
+    margin-left:20px;
 
 
 }
