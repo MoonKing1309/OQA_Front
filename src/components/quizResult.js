@@ -10,7 +10,8 @@ function QuizResult(props) {
     const navigate = useNavigate();
     const location = useLocation();
     const {id} = useParams()
-    const userChoices = useState(location.state)
+    const userChoices = useState(location.state[0])
+    const timeTaken = useState(location.state[1])
     const [score,setScore] = useState(0)
     const [total,setTotal] = useState(0)
 
@@ -31,7 +32,6 @@ function QuizResult(props) {
         try {
             
             await axios.get(`https://qmi.onrender.com/play/Quiz/${id}/result`).then((data)=>correctChoice = data.data).catch((err)=>console.log(err))
-            console.log(correctChoice,userChoices[0])
             for(let i=0;i<correctChoice.length;i++)
             {
                 updateTotal()
@@ -63,7 +63,7 @@ function QuizResult(props) {
         var circleLoader = document.querySelector(`.${style.circleLoader}`)
         circleLoader.style.display='inline-block'
         try {
-            await axios.post(`https://qmi.onrender.com/play/Quiz/${id}/result`,{userID:loginVal,userScore:`${score}/${total}`})
+            await axios.post(`https://qmi.onrender.com/play/Quiz/${id}/result`,{userID:loginVal,userScore:`${score}/${total}`,quizTime:new Date(Number(timeTaken[0])* 1000).toISOString().slice(14, 19)})
                 .then(()=>{
                     circleLoader.style.display='none'
                 })
@@ -81,6 +81,8 @@ function QuizResult(props) {
         <div className={style.container}>
             <h4>Your Quiz Score : </h4>
             <h1>{score}/{total}</h1>
+            <h4>Time Taken : </h4>
+            <h1>{new Date(Number(timeTaken[0])* 1000).toISOString().slice(14, 19)}</h1>
             <div>
             <p className={style.circleLoader}></p>
             <button id ={style.btn} onClick={saveScore}>Save Score</button>

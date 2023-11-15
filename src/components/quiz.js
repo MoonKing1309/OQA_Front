@@ -3,6 +3,7 @@ import './quiz.css';
 import Question from './question'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Adminquiz from './adminquiz';
+import Timer from './timer';
 import axios from 'axios';
 function Quiz(props)
 {
@@ -11,6 +12,7 @@ function Quiz(props)
     const [questionId,setquestionId] = useState(0);
     const [choices,setChoices] = useState(new Map());
     const didMount = useRef(false);
+
     const navigate = useNavigate()
 
     const location =useLocation();
@@ -19,6 +21,9 @@ function Quiz(props)
 
     const loginVal = props.loginState[0];
     const setLoginVal = props.loginState[1];
+
+    const [time,setTime] = useState(0)
+    
 
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
@@ -58,7 +63,7 @@ function Quiz(props)
     }
 
     function onSubmit(){
-        navigate(`result`,{state:choices})
+        navigate(`result`,{state:[choices,time]})
     }
 
    async function onDelete (){
@@ -84,7 +89,7 @@ function Quiz(props)
             if(questionId>0)
             {
                 prev.removeAttribute("disabled")
-                prev.style.backgroundColor='blueviolet';
+                prev.style.backgroundColor='rgb(0,149,255)';
             }
             if(questionId==0)
             {
@@ -100,7 +105,7 @@ function Quiz(props)
             {
                 next.removeAttribute("disabled")
                 next.innerText='Next'
-                next.style.backgroundColor='blueviolet';
+                next.style.backgroundColor='rgb(0,149,255)';
             }
             
         },[questionId])
@@ -109,10 +114,12 @@ function Quiz(props)
         
     },[questionId])
 
-    //client side logic to get the quiz details and question
  
     return(
         <div className='content'>
+            <div className='timerBox'>
+                <Timer time={[time,setTime]}/>
+            </div>
             <div className='quiz-title'>
                 <h1>{quizData[0].quizTitle}<button className='edit' style={{display:(loginVal==1)? 'inline-block':'none'}} onClick={onEdit}> Edit</button><button className='delete' style={{display:(loginVal==1)? 'inline-block':'none'}} onClick={onDelete}> Delete</button></h1>
                 
@@ -138,4 +145,4 @@ function Quiz(props)
     
 }
 
-export default Quiz;
+export default Quiz; 

@@ -2,16 +2,20 @@
     width: 100vw;
     height: 300px;
     
-    margin-top: auto;
+    position: fixed;
+    bottom: auto;
 
-    background-color: blueviolet;
+    background-color: black;
+
+    box-shadow: 0 2px 15px aliceblue;
+    clip-path: inset(-20px 0px 0px 0px);
 }
 
 .footerContent
 {
     padding-top: 20px;
 
-    color:white;
+    color:aliceblue;
     text-align: center;
 
     display: grid;
@@ -76,5 +80,5 @@
 .footerContent a
 {
     text-decoration: none;
-    color: white;
+    color: rgb(0,149,255);
 }

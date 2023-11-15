@@ -157,7 +157,7 @@ function Question(props) {
             }
             else {
                 radio[3].checked = true;
-            }
+            } 
             
         }
         
@@ -168,15 +168,16 @@ function Question(props) {
         <div>
             {displayQuetion()}
             <form>
+
                 <div className='options'>
-                    <div className='option'>
-                        <input type='radio' id='optionA' name='options' ></input>
+                    <div className='option1'>
+                        <input type='radio' id='optionA' name='options'></input>
                         <label htmlFor='optionA'>
                             {displayOptionA()}
                         </label>
                     </div>
 
-                    <div className='option'>
+                    <div className='option2'>
                         <input type='radio' id='optionB' name='options'></input>
                         <label htmlFor='optionB'>
                             {displayOptionB()}
@@ -184,7 +185,7 @@ function Question(props) {
                         
                     </div>
 
-                    <div className='option'>
+                    <div className='option3'>
                         <input type='radio' id='optionC' name='options'></input>
                         <label htmlFor='optionC'>
                             {displayOptionC()}
@@ -192,7 +193,7 @@ function Question(props) {
                         
                     </div>
 
-                    <div className='option'>
+                    <div className='option4'>
                         <input type='radio' id='optionD' name='options'></input>
                         <label htmlFor='optionD'>
                             {displayOptionD()}
@@ -202,7 +203,7 @@ function Question(props) {
                 </div>
                 <div className='option'>
                         <button type='submit' id='btn' onClick={onSubmit}>
-                            Confirm
+                            Confirm Choice
                         </button>
                     </div>
             </form>

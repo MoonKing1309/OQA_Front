@@ -1,7 +1,17 @@
-.content
+.contactContainer
 {
     text-align: center;
-    min-height: 70vh;
+    min-height: 100vh;
+}
+
+.contactContent{
+    box-shadow: 1px 5px 20px black;
+    width: 350px;
+    margin: auto auto;
+    height: 400px;
+    margin-top: 70px;
+    background-color: aliceblue;
+    border-radius: 20px;
 }
 
 #tableContact
@@ -18,7 +28,7 @@
 #tableContact  input
 {
     outline: none;
-    border: 2px solid blueviolet;
+    border: 2px solid rgb(0,149,255);
     height: 20px;
     border-radius: 30px;
     padding-left: 10px;
@@ -27,7 +37,7 @@
 #tableContact  textarea
 {
     outline: none;
-    border: 2px solid blueviolet;
+    border: 2px solid rgb(0,149,255);
     height: 50px;
     border-radius: 10px;
     padding-left: 10px;

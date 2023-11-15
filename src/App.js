@@ -20,11 +20,11 @@ import {useEffect, useState} from 'react'
 function App() {
 
   const [loginVal,setLoginVal] = useState(0);
+  const [timer,setTimer] = useState(0);
   // const [quizData, setQuizData] = useState();quizState={[quizData,setQuizData]}
   //change from 0 to localstoage value to not logout after each refresh;
   
   useEffect(() => {
-    console.log("in app.js",localStorage)
     const items = JSON.parse(localStorage.getItem('loginVal'));
     if (items) {
      setLoginVal(items);
@@ -39,13 +39,14 @@ function App() {
           <Route path='/home' element={<Home loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/play' element={<Play loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/contact' element={<Contact loginState={[loginVal,setLoginVal]}/>}></Route>
-          <Route path='/play/Quiz/:id' element={<Quiz loginState={[loginVal,setLoginVal]} />}></Route>
+          <Route path='/play/Quiz/:id' element={<Quiz loginState={[loginVal,setLoginVal]} timer={[timer,setTimer]} />}></Route>
           <Route path='/login' element={<Login loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/signup' element={<Signup loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='/myaccount' element={<Myaccount loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='play/adminQuiz' element={<Adminquiz loginState={[loginVal,setLoginVal]}/>}></Route>
           <Route path='play/adminEditQuiz/:id' element={<AdminEditQuiz loginState={[loginVal,setLoginVal]}/>}></Route>
-          <Route path='play/Quiz/:id/result' element={<QuizResult loginState={[loginVal,setLoginVal]}/>}></Route>
+          <Route path='play/Quiz/:id/result' element={<QuizResult loginState={[loginVal,setLoginVal]} timer={[timer,setTimer]}/>}></Route>
+          
           
         </Routes>
         <Footer/>

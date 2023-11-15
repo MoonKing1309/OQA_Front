@@ -1,6 +1,6 @@
 body
 {
-    perspective: 1000px;
+    perspective: 100px;
 }
 
 .container
@@ -12,6 +12,7 @@ body
     justify-content: center;
     overflow-y: scroll; 
     min-height: 100vh !important;
+    background-color: aliceblue;
 
 
 }
@@ -23,7 +24,7 @@ body
     z-index: 0;
     margin:50px auto;
     cursor: pointer;
-    box-shadow: 0px 20px 1000px;
+    box-shadow: 5px 5px 100px black;
     transition-property: transform;
     transform-style: preserve-3d;
     transition-timing-function: ease-in-out;
@@ -37,7 +38,7 @@ body
     z-index: 0;
     margin:50px auto;
     cursor: pointer;
-    box-shadow: 0px 20px 1000px;
+    box-shadow: 0px 20px 1000px black;
     transition-property: transform;
     transform-style: preserve-3d;
     transition-timing-function: ease-in-out;
@@ -79,8 +80,8 @@ body
         z-index: 3;
         position: relative;
         height: 70% !important;
-        margin-top:-50% !important;
-        margin-right:-20% !important;
+        margin-top:-40% !important;
+        margin-right:-10% !important;
     }
     .card-text-fieldAdmin
     {
@@ -179,6 +180,6 @@ body
 {
     font-weight: 800;
     text-align: center;
-    color: blueviolet;
+    color: rgb(0,149,255);
 }
 
