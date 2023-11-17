@@ -88,7 +88,7 @@ function Adminquiz(props) {
                 quesCount:qcount
             }
             try {
-            await axios.post('http://localhost:5001/play/adminQuiz',{
+            await axios.post('https://qmi.onrender.com/play/adminQuiz',{
                 quizJson,
                 questionJson
             },{ 
