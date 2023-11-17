@@ -1,11 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import style from './myaccount.module.css'
 import axios from 'axios';
 
 function Myaccount(props) {
     const loginVal = props.loginState[0];
     const setLoginVal = props.loginState[1];
-    const [userData , setUserData] = useState()
+    // const didMount = useRef(false)
+    const items = JSON.parse(localStorage.getItem('loginVal'));
+    if (items) {
+         setLoginVal(loginVal => items);
+    }
     const [detailsArray ,setDetailsArray] = useState([])
     const [userDetails,setUserDetails] = useState([])
 
@@ -79,34 +83,21 @@ function Myaccount(props) {
 
 
     useEffect(()=>{
+        if ( loginVal==0) {
+            console.log("returning")
+            return(() =>{})
+        }
+        console.log("loginVal is :" ,loginVal)
         if(loginVal!=1)
+        {
+            getUserDetails()
             getQuizDetails()
+        }
         else if(loginVal==1)
         {
             getAllQuizDetails()
         }
-    },[])
-
-    useEffect(()=>{
-        
-    },[detailsArray])
-
-    useEffect(()=>{
-        if(loginVal!=1)
-            getUserDetails()
-        else if(loginVal==1)
-        {
-            setUserDetails({"userName":"root"})
-        }
-    },[])
-
-    useEffect(()=>{
-    },[userDetails])
-
-
-
-    
-    
+    },[loginVal])    
 
     return (
         <div className={style.container}>
@@ -121,8 +112,11 @@ function Myaccount(props) {
                                 </label>
                             </td>
                             <td>
-                                <input id="newUserName" defaultValue={userDetails.userName}>
-                                </input>
+                            {(loginVal==1)?
+                                <input defaultValue='root'></input>
+                                :
+                                <input id="newUserName" defaultValue={userDetails.userName}></input>
+                            }
                             </td>
                         </tr>
                         <tr>
@@ -162,10 +156,10 @@ function Myaccount(props) {
                 
                     {loginVal==1?<h1>Scores</h1>:<h1>Your Scores</h1>}
                     
-                
+            <div className={style.scrollableTable}>
                 <table className={style.scoreTable}>
                     {loginVal==1?<tbody>
-                            <tr>
+                            <tr style={{position:'sticky',top:'0px'}}>
                                 <th>User Name</th>
                                 <th>Quiz Name</th>
                                 <th>Score</th>
@@ -174,13 +168,16 @@ function Myaccount(props) {
                             </tr>
                             {detailsArray.map((item,index)=>{
                                 return(
+                                    
                                 <tr>
                                     <td key={index+10}>{item.userName}</td>
                                     <td key={index+11}>{item.quizName}</td>
                                     <td key={index+12}>{item.userScore}</td>
                                     <td key={index+13}>{item.quizTime}</td>
                                     <td key={index+14}>{item.quizDate}</td>
-                                </tr>) 
+                                </tr>
+                                ) 
+                                
                             }) 
                         }
                         </tbody>:
@@ -201,10 +198,12 @@ function Myaccount(props) {
                                 </tr>)
                             })
                         }
+                    
                         </tbody>
 
                     }
                 </table>
+                </div>
             </div>
            
 

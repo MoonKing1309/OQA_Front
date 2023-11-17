@@ -21,6 +21,14 @@ function AdminEditQuiz(){
         else{}
             
     }
+    function isImgUrl(url) {
+        const img = new Image();
+        img.src = url;
+        return new Promise((resolve) => {
+          img.onload = () => resolve(true);
+          img.onerror = () => resolve(false);
+        });
+      }
 
     const patchQuiz = async (event) =>{
         event.preventDefault()
@@ -83,9 +91,11 @@ function AdminEditQuiz(){
                 })
                 
             }
-            if(!qimg[0]){
-                qimg[0]="https://img.freepik.com/free-photo/mystery-box-collage_23-2150061724.jpg?w=1800&t=st=1699634973~exp=1699635573~hmac=55247d12e201c1ac56a274a3fd834b07e4cbb8150d55bf0315f5904aaed189c6"
+            let isImg = await isImgUrl(qimg[0].value)
+            if(!isImg){
+                qimg[0].value="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png"
             }
+
             let quizJson={
                 quizTitle:qname[0].value,
                 quizDesc:qdesc[0].value,

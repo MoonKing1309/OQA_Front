@@ -14,6 +14,7 @@ function QuizResult(props) {
     const timeTaken = useState(location.state[1])
     const [score,setScore] = useState(0)
     const [total,setTotal] = useState(0)
+    const [saved,setSaved] = useState(false)
 
     const updateScore =()=>{
         setScore(score => score+1)
@@ -60,6 +61,7 @@ function QuizResult(props) {
     }
 
     const saveScore = async ()=>{
+        setSaved(true)
         var circleLoader = document.querySelector(`.${style.circleLoader}`)
         circleLoader.style.display='inline-block'
         try {
@@ -68,12 +70,14 @@ function QuizResult(props) {
                     circleLoader.style.display='none'
                 })
                 .catch(()=>{
+                    setSaved(false)
                     circleLoader.style.display='none'
                     alert("Could not save data at this time.Contact Admin")
                 })
             
         } catch (error) {
-            
+            setSaved(false)
+
         }
     }
 
@@ -85,7 +89,7 @@ function QuizResult(props) {
             <h1>{new Date(Number(timeTaken[0])* 1000).toISOString().slice(14, 19)}</h1>
             <div>
             <p className={style.circleLoader}></p>
-            <button id ={style.btn} onClick={saveScore}>Save Score</button>
+            <button id ={style.btn} onClick={saveScore} disabled={(saved || loginVal==1)?true:false} style={(saved || loginVal==1)?{backgroundColor:'gray'}:{backgroundColor:'rgb(0,149,255'}}>Save Score</button>
             <button id ={style.btn} onClick={getQuiz}>Try Again</button>
             <button id ={style.btn} onClick={()=>{navigate('/play')}}>Select a Different Quiz</button>
             </div>
