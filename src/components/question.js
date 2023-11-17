@@ -157,7 +157,7 @@ function Question(props) {
             }
             else {
                 radio[3].checked = true;
-            }
+            } 
             
         }
         
@@ -168,6 +168,7 @@ function Question(props) {
         <div>
             {displayQuetion()}
             <form>
+
                 <div className='options'>
                     <div className='option1'>
                         <input type='radio' id='optionA' name='options'></input>

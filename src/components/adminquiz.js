@@ -144,7 +144,7 @@ function Adminquiz(props) {
                                 <>
                                 <tr>
                                     <td>
-                                        <label htmlFor={'ques'+`${index+1}`} style={{color:'blueviolet',fontWeight:'900'}}>Question {`${index+1}`}</label>
+                                        <label htmlFor={'ques'+`${index+1}`} style={{color:'rgb(0,149,255)',fontWeight:'900'}}>Question {`${index+1}`}</label>
                                     </td>
                                     <td>
                                         <input name={'ques'+`${index+1}`} className='quesInputs' style={{width:'250px'}}></input>
@@ -202,7 +202,7 @@ function Adminquiz(props) {
                     </tbody>
                 </table>
                 <button id={style.addQuestion} className={style.btn} onClick={addRow} type='button'>Add Question</button>
-                <button id={style.submitQuiz} className={style.btn} type='submit' onClick={postQuiz} style={add==1?{backgroundColor:'yellowgreen'}:{backgroundColor:'blueviolet'}}>Submit</button>
+                <button id={style.submitQuiz} className={style.btn} type='submit' onClick={postQuiz} style={add==1?{backgroundColor:'yellowgreen'}:{backgroundColor:'rgb(0,149,255)'}}>Submit</button>
             </form>
         </div>
     );

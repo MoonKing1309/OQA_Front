@@ -39,7 +39,7 @@ function Navbar(props)
     return(
         <nav>
             <div className='nav-title-1'>
-                 <Link to='/home'><img src={logo192} width={'50px'}></img></Link>
+                <Link to='/home'><img src={logo192} width={'50px'}></img></Link>
             </div>
             <div className='nav-body-1'>
                 <div className='nav-link-1'>

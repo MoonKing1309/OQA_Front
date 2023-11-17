@@ -32,7 +32,6 @@ function QuizResult(props) {
         try {
             
             await axios.get(`https://qmi.onrender.com/play/Quiz/${id}/result`).then((data)=>correctChoice = data.data).catch((err)=>console.log(err))
-            console.log(correctChoice,userChoices[0])
             for(let i=0;i<correctChoice.length;i++)
             {
                 updateTotal()

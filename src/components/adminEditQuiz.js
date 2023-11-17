@@ -190,7 +190,7 @@ function AdminEditQuiz(){
                                 <>
                                 <tr>
                                     <td>
-                                        <label htmlFor={'ques'+`${index+1}`} style={{color:'blueviolet',fontWeight:'900'}}>Question {`${index+1}`}</label>
+                                        <label htmlFor={'ques'+`${index+1}`} style={{color:'rgb(0,149,255)',fontWeight:'900'}}>Question {`${index+1}`}</label>
                                     </td>
                                     <td>
                                         <input name={'ques'+`${index+1}`} className='quesInputs' style={{width:'250px'}} defaultValue={item.questionText}></input>
@@ -265,7 +265,7 @@ function AdminEditQuiz(){
                                 <>
                                 <tr>
                                     <td>
-                                        <label htmlFor={'ques'+`${count+index+1}`} style={{color:'blueviolet',fontWeight:'900'}}>Question {`${count+index+1}`}</label>
+                                        <label htmlFor={'ques'+`${count+index+1}`} style={{color:'rgb(0,149,255)',fontWeight:'900'}}>Question {`${count+index+1}`}</label>
                                     </td>
                                     <td>
                                         <input name={'ques'+`${count+index+1}`} className='quesInputs' style={{width:'250px'}}></input>

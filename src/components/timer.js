@@ -14,7 +14,7 @@ function Timer(props) {
     },[])
     return ( 
         <div id={style.content}>
-            {new Date(time * 1000).toISOString().slice(14, 19)}
+            <b>{new Date(time * 1000).toISOString().slice(14, 19)}</b>
         </div>
      );
 }

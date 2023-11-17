@@ -1,7 +1,7 @@
 nav
 {
     display: flex;
-    background-color: blueviolet;
+    background-color: aliceblue;
     margin: 0px;
     height: 60px;
     width: 100vw;
@@ -9,6 +9,8 @@ nav
     position: sticky;
     top:0px;
     z-index: 4;
+    box-shadow: 0 2px 15px black;
+    clip-path: inset(0px 0px -20px 0px);
 }
 
 .nav-title-0,.nav-title-1
@@ -56,14 +58,15 @@ nav
     padding: 10px;
     margin-right: 10px;
     text-decoration: none;
-    color: white;
-    border: 1px solid white;
-    box-shadow: 0px 1px 5px white;
+    color: rgb(0,149,255);
+    font-weight: 800;
+    border: 1px solid rgb(0,149,255);
+    box-shadow: 0px 1px 5px rgb(0,149,255);
 }
 
 .nav-buttons-0 > a:hover
 {
-    box-shadow: 0px 0px 1px white;
+    box-shadow: 0px 0px 1px rgb(0,149,255);
     transform: translateY(4px);
 }
 
@@ -107,14 +110,14 @@ nav
     padding: 10px;
     margin-right: 10px;
     text-decoration: none;
-    color: white;
-    border: 1px solid white;
-    box-shadow: 0px 1px 5px white;
+    color: rgb(0,149,255);
+    border: 1px solid rgb(0,149,255);
+    box-shadow: 0px 1px 5px rgb(0,149,255);
 }
 
 .nav-buttons-1 > a:hover
 {
-    box-shadow: 0px 0px 1px white;
+    box-shadow: 0px 0px 1px rgb(0,149,255);
     transform: translateY(4px);
 }
 
@@ -132,14 +135,14 @@ nav
     display: block;
     margin-top: 5px;
     right:0;
-    background: #fff;
+    background: rgb(0,149,255);
     transition: width .2s ease;
   }
    
   .link:hover:after{
     width: 100%;
     left: 0;
-    background: #fff;
+    background: rgb(0,149,255);
   }
   
 
@@ -168,7 +171,7 @@ nav
 {
     nav
     {
-        font-size:x-small;
+        /* font-size:x-small; */
     }
 
     .nav-link-1 > a ,.nav-link-0 > a

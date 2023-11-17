@@ -24,7 +24,7 @@ function Myaccount(props) {
                     
                     setTimeout(()=>{
                         temp1.innerHTML ='Confirm';
-                        temp1.style.backgroundColor='blueviolet'
+                        temp1.style.backgroundColor='rgb(0,149,255)'
                         temp1.removeAttribute('disabled')
                     },2000)
                 })
@@ -169,7 +169,7 @@ function Myaccount(props) {
                                 <th>User Name</th>
                                 <th>Quiz Name</th>
                                 <th>Score</th>
-                                 <th>Time</th>
+                                <th>Time</th>
                                 <th>Date</th>
                             </tr>
                             {detailsArray.map((item,index)=>{
@@ -178,7 +178,7 @@ function Myaccount(props) {
                                     <td key={index+10}>{item.userName}</td>
                                     <td key={index+11}>{item.quizName}</td>
                                     <td key={index+12}>{item.userScore}</td>
-                                     <td key={index+13}>{item.quizTime}</td>
+                                    <td key={index+13}>{item.quizTime}</td>
                                     <td key={index+14}>{item.quizDate}</td>
                                 </tr>) 
                             }) 
@@ -188,7 +188,7 @@ function Myaccount(props) {
                             <tr>
                                 <th>Quiz Name</th>
                                 <th>Score</th>
-                                 <th>Time</th>
+                                <th>Time</th>
                                 <th>Date</th>
                             </tr>
                             {detailsArray.map((item,index)=>{

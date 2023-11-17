@@ -7,7 +7,7 @@ function Footer() {
             <div className={style.footerContent}>
 
                 <div className={style.footerColumn1}>
-                    <h1 >Qmi</h1>
+                    <h1 >Quizzmi</h1>
                     <p>
                     Put your knowledge to <br></br>the test under the ticking clock. 
                     </p>

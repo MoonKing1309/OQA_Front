@@ -1,11 +1,10 @@
 import './contact.css'
 
 function Contact(){ 
-
- 
     return(
-        <div className="content">
-            <h2 style={{color:'blueviolet' , fontWeight:'900'}}>Send us a Message</h2>
+        <div className='contactContainer'>
+        <div className="contactContent">
+            <h2 style={{color:'rgb(0,149,255)' , fontWeight:'900'}}>Send us a Message</h2>
 
             <form action='mailto:conorken1@gmail.com' method="post" enctype="text/plain">
                 <table id='tableContact'>
@@ -22,8 +21,9 @@ function Contact(){
                         <td><textarea type="text" name="comment"/></td>
                     </tr>
                 </table>
-                <button type="submit">Send</button>
+                <button type="submit" id='btn'>Send</button>
             </form>
+        </div>
         </div>
     )
 }

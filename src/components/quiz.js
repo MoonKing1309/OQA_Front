@@ -12,6 +12,7 @@ function Quiz(props)
     const [questionId,setquestionId] = useState(0);
     const [choices,setChoices] = useState(new Map());
     const didMount = useRef(false);
+
     const navigate = useNavigate()
 
     const location =useLocation();
@@ -21,7 +22,8 @@ function Quiz(props)
     const loginVal = props.loginState[0];
     const setLoginVal = props.loginState[1];
 
-     const [time,setTime] = useState(0)
+    const [time,setTime] = useState(0)
+    
 
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
@@ -87,7 +89,7 @@ function Quiz(props)
             if(questionId>0)
             {
                 prev.removeAttribute("disabled")
-                prev.style.backgroundColor='blueviolet';
+                prev.style.backgroundColor='rgb(0,149,255)';
             }
             if(questionId==0)
             {
@@ -103,7 +105,7 @@ function Quiz(props)
             {
                 next.removeAttribute("disabled")
                 next.innerText='Next'
-                next.style.backgroundColor='blueviolet';
+                next.style.backgroundColor='rgb(0,149,255)';
             }
             
         },[questionId])
@@ -112,7 +114,6 @@ function Quiz(props)
         
     },[questionId])
 
-    //client side logic to get the quiz details and question
  
     return(
         <div className='content'>
@@ -144,4 +145,4 @@ function Quiz(props)
     
 }
 
-export default Quiz;
+export default Quiz; 

@@ -3,6 +3,7 @@ import clockimg from '../img/clockimg.avif'
 import newimg from '../img/newimg.avif'
 import cupimg from '../img/cupimg.jpg'
 import {Link} from 'react-router-dom'
+import logo192 from '../img/logo192.png'
 function Home(props) {
 
     const loginVal = props.loginState[0];
@@ -88,23 +89,26 @@ function Home(props) {
                     </div>
             </div>
             <div className={style.textarea}>
-                <h2>
+                <h1>
                     Welcome to ,
-                </h2>
-                <h1 id={style.bigText}>
-                    Quizzmi
                 </h1>
-                <h2>
-                    Unlock the Power of Knowledge
-                </h2>
-                <h3>
-                    Are you ready to challenge your mind, expand your horizons, and have some fun along the way? Look no further! ProjectName is here to provide you with a world of captivating quizzes that cater to every interest, age, and knowledge level.
-                </h3>
-                <div style={{width:"100%",display:'flex'}}>
-                    
-                    <Link id={style.login} to={buttonReturn()}>{textReturn()}</Link>
-                </div>
+                <img id={style.textFieldLogo} src={logo192}></img>
+                <div className={style.smallTextArea}>
+                    {/* <h1 id={style.subHeadings}>
+                        Quizzmi
+                    </h1> */}
+                    <h2 className={style.subHeadings}>
+                        Unlock the Power of Knowledge
+                    </h2>
+                    <h3>
+                        Are you ready to challenge your mind, expand your horizons, and have some fun along the way? Look no further! ProjectName is here to provide you with a world of captivating quizzes that cater to every interest, age, and knowledge level.
+                    </h3>
+                    <div style={{width:"100%",display:'flex'}}>
+                        
+                        <Link id={style.login} to={buttonReturn()}>{textReturn()}</Link>
+                    </div>
                
+                </div>
 
             </div>
         </div>
