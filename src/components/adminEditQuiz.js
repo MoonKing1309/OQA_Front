@@ -21,6 +21,15 @@ function AdminEditQuiz(){
         else{}
             
     }
+      function isImgUrl(url) {
+        const img = new Image();
+        img.src = url;
+        return new Promise((resolve) => {
+          img.onload = () => resolve(true);
+          img.onerror = () => resolve(false);
+        });
+      }
+
 
     const patchQuiz = async (event) =>{
         event.preventDefault()
