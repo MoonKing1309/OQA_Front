@@ -34,6 +34,7 @@ export default function Login(props){
         }
         if(uname=='root' && pwd=='root')
         {
+            localStorage.setItem('loginVal', JSON.stringify(1));
             setLoginVal(1);
             localStorage.setItem('loginVal', JSON.stringify(1));
             navigate('/home')
