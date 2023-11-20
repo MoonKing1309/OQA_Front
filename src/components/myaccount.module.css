@@ -83,12 +83,21 @@
 {
     grid-area: scores;
     text-align: center;
+    
 }
+
+.scrollableTable
+{
+    max-height: 329px;
+    overflow-y: scroll;
+}
+
 
 .scoreTable
 {
     margin:auto auto;
     border-collapse: collapse;
+   
 }
 
 .scoreTable th
