@@ -84,10 +84,8 @@ function Myaccount(props) {
 
     useEffect(()=>{
         if ( loginVal==0) {
-            console.log("returning")
             return(() =>{})
         }
-        console.log("loginVal is :" ,loginVal)
         if(loginVal!=1)
         {
             getUserDetails()
@@ -159,7 +157,7 @@ function Myaccount(props) {
             <div className={style.scrollableTable}>
                 <table className={style.scoreTable}>
                     {loginVal==1?<tbody>
-                            <tr style={{position:'sticky',top:'0px'}}>
+                            <tr id={style.thTr}>
                                 <th>User Name</th>
                                 <th>Quiz Name</th>
                                 <th>Score</th>
@@ -182,7 +180,7 @@ function Myaccount(props) {
                         }
                         </tbody>:
                         <tbody>
-                            <tr>
+                            <tr id={style.thTr}>
                                 <th>Quiz Name</th>
                                 <th>Score</th>
                                 <th>Time</th>
