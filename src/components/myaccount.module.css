@@ -9,21 +9,6 @@
     grid-template-areas: 
     'details scores scores';
 }
-
-@media screen and (max-width:900px) {
-    .container
-    {
-        grid-template-columns: 1fr;.container
-{
-    min-height: 100vh;
-
-    display:grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    'details scores scores';
-}
 #thTr{
     position: sticky !important;
     top:0px !important;
@@ -66,107 +51,17 @@
 {
     text-align: center;
     grid-area: details;
-}
-
-.details label
-{
-    color: black;
-    font-weight: 800;
-}
-
-.details  input
-{
-    outline: none;
-    border: 2px solid rgb(0,149,255);
-    height: 20px;
-    border-radius: 30px;
-    padding-left: 10px;
-}
-
-#confirmBtn
-{
-    padding: 10px 20px 10px 20px;
-    background-color: rgb(0,149,255);
-    border: none;
-    border-radius: 50px;
-    color:white;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0px 3px 10px black;
-    margin: auto auto;
-    text-decoration: none;
-
-}
-
-#confirmBtn:active
-{
-    box-shadow: 0px 0px 2px black;
-    transform: scaleY(8px);
     
 }
 
-#detailsTable
+.detailsTable
 {
-    margin : auto auto;
-}
-
-.scores
-{
-    grid-area: scores;
-    text-align: center;
-    
-}
-
-.scrollableTable
-{
-    max-height: 329px;
-    overflow-y: scroll;
-}
-
-
-.scoreTable
-{
-    margin:auto auto;
-    border-collapse: collapse;
-   
-}
-
-.scoreTable th
-{
-    background-color: rgb(0,149,255);
-    
-}
-
-.scoreTable tr
-{
+    box-shadow: 1px 5px 20px black;
     background-color: aliceblue;
-}
+    border-radius: 15px;
+    margin: 5px 5px;
+    margin-top: 50px;
 
-.scoreTable td
-{
-    border:2px solid rgb(0,149,255);
-}
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        'details'
-        'scores';
-    }
-
-    .scores
-    {
-        margin: 10px;
-    }
-}
-
-.container h1
-{
-    color : rgb(0,149,255);
-}
-
-.details
-{
-    text-align: center;
-    grid-area: details;
 }
 
 .details label
