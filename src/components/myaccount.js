@@ -1,10 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import style from './myaccount.module.css'
 import axios from 'axios';
+import eyeShow from '../img/eyeShow16.png'
+import eyeHide from '../img/eyeHide16.png'
 
 function Myaccount(props) {
     const loginVal = props.loginState[0];
     const setLoginVal = props.loginState[1];
+    const [pwdShow,setPwdShow] = useState(false)
+    const togglePwdShow = ()=>{
+        var pwd = document.querySelector("input[id='newPwd']")
+        setPwdShow(!pwdShow)
+        if(pwd.getAttribute("type") =='password')
+            pwd.setAttribute('type','text')
+        else
+            pwd.setAttribute('type','password')
+    }
     // const didMount = useRef(false)
     const items = JSON.parse(localStorage.getItem('loginVal'));
     if (items) {
@@ -96,58 +107,63 @@ function Myaccount(props) {
             getAllQuizDetails()
         }
     },[loginVal])    
-
+ 
     return (
         <div className={style.container}>
             <div className={style.details}>
-                <h1>Your Details</h1>
-                <table id={style.detailsTable}>
-                    <tbody>
-                        <tr>
-                            <td> 
-                                <label htmlFor='uname'>
-                                    Username
-                                </label>
-                            </td>
-                            <td>
-                            {(loginVal==1)?
-                                <input defaultValue='root'></input>
-                                :
-                                <input id="newUserName" defaultValue={userDetails.userName}></input>
-                            }
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label htmlFor='pwd'>
-                                    Password
-                                </label>
-                            </td>
-                            <td>
-                            {(loginVal==1)?
-                                <input defaultValue='root'></input>
-                                :
-                                <input id="newPwd" placeholder='Enter New Password'></input>
-                            }
-                                
-                            </td>
-                        </tr>
-                        {loginVal==1?<tr>
-                            <td colSpan={2}>
-                                <button id={style.confirmBtn} style={{backgroundColor:'gray'}} disabled>
-                                    Confirm
-                                </button>
-                            </td>
-                        </tr>:<tr>
-                            <td colSpan={2}>
-                                <button id={style.confirmBtn} onClick={UpdateUserDetail} name="done">
-                                    Confirm
-                                </button>
-                            </td>
-                        </tr>}
-                        
-                    </tbody>
-                </table>
+                <div className={style.detailsTable}>
+                    <h1>Your Details</h1>
+                    <table id={style.detailsTable}>
+                        <tbody>
+                            <tr>
+                                <td> 
+                                    <label htmlFor='uname'>
+                                        Username
+                                    </label>
+                                </td>
+                                <td>
+                                {(loginVal==1)?
+                                    <input defaultValue='root'></input>
+                                    :
+                                    <input id="newUserName" defaultValue={userDetails.userName}></input>
+                                }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label htmlFor='pwd'>
+                                        Password
+                                    </label>
+                                </td>
+                                <td>
+                                {(loginVal==1)?
+                                    <input defaultValue='root'></input>
+                                    :
+                                    <>
+                                    <input id="newPwd" placeholder='Enter New Password' type='password'></input>
+                                    <img id='eyes' src={pwdShow?eyeHide:eyeShow} onClick={togglePwdShow}></img>
+                                    </>
+                                }
+                                    
+                                </td>
+                            </tr>
+                            {loginVal==1?<tr>
+                                <td colSpan={2}>
+                                    <button id={style.confirmBtn} style={{backgroundColor:'gray'}} disabled>
+                                        Confirm
+                                    </button>
+                                </td>
+                            </tr>:<tr>
+                                <td colSpan={2}>
+                                    <button id={style.confirmBtn} onClick={UpdateUserDetail} name="done">
+                                        Confirm
+                                    </button>
+                                </td>
+                            </tr>}
+                            
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div className={style.scores}>
