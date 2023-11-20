@@ -101,7 +101,7 @@ function Home(props) {
                         Unlock the Power of Knowledge
                     </h2>
                     <h3>
-                        Are you ready to challenge your mind, expand your horizons, and have some fun along the way? Look no further! ProjectName is here to provide you with a world of captivating quizzes that cater to every interest, age, and knowledge level.
+                        Are you ready to challenge your mind, expand your horizons, and have some fun along the way? Look no further! Quizzmi is here to provide you with a world of captivating quizzes that cater to every interest, age, and knowledge level.
                     </h3>
                     <div style={{width:"100%",display:'flex'}}>
                         
