@@ -2,8 +2,9 @@
 {
     text-align: center;
     min-height: 100vh;
+    background-color: aliceblue;
+    padding-top: 100px;
 }
-
 .contactContent{
     box-shadow: 1px 5px 20px black;
     width: 350px;
