@@ -10,7 +10,6 @@ body
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll;
     min-height: 100vh !important;
     background-color: aliceblue;
     padding:0px;
