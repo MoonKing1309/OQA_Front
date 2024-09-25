@@ -180,7 +180,7 @@ function Myaccount(props) {
                                 <th>Time</th>
                                 <th>Date</th>
                             </tr>
-                            {detailsArray.map((item,index)=>{
+                           {detailsArray?detailsArray.map((item,index)=>{
                                 return(
                                     
                                 <tr>
@@ -193,7 +193,7 @@ function Myaccount(props) {
                                 ) 
                                 
                             }) 
-                        }
+                        :<tr><td colSpan={5}>Start playing to see Results!</td></tr>}
                         </tbody>:
                         <tbody>
                             <tr id={style.thTr}>
